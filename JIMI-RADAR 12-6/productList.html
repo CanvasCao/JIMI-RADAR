@@ -7,8 +7,11 @@
     <title>产品列表</title>
     <link rel="stylesheet" href="css/main.css"/>
     <style type="text/css">
+        body {
+            background: #f1f4f7;
+        }
+
         .innerC {
-            display: none;
             position: fixed;
             border: 1px solid #000;
             width: 1024px;
@@ -19,104 +22,105 @@
             pointer-events: none;
         }
 
-        .header {
-            height: 60px;
-            /*border: 1px solid red;*/
-            background: #373b40;
+        .listCon {
+            box-sizing: border-box;
+            padding: 15px 0px;
         }
 
-        .headerInnerC {
-            height: 60px;
-            width: 1024px;
-            /*border: 1px solid blue;*/
+        .list {
+            width: 1064px;
             margin: 0 auto;
         }
 
-        .headerLeft {
-            float: left;
-            cursor: pointer;
-        }
-
-        .headerLogo {
-            margin: 15px 0px;
-            height: 30px;
-            display: inline-block;
-            float: left;
-        }
-
-        .headerLeft span {
-            color: white;
-            display: inline-block;
-            height: 60px;
-            line-height: 60px;
+        .pageClickBar {
+            text-align: center;
             box-sizing: border-box;
-            padding: 0 30px 0 55px;
-            font-size: 16px;
-            position: relative;
-
+            padding: 20px 0px;
         }
 
-        .headerLeft span::before {
-            content: "";
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            left: 17px;
-            top: 15px;
+        .pageClickBar span {
+            margin: 0 1px;
         }
 
-        /*相对于父元素的第2个元素*/
-        .headerLeft span:nth-child(2)::before {
-            background: url(img/header/headerMenu1.png) no-repeat;
+        .lastPage, .nextPage {
+            padding: 14px 20px;
+            font-size: 14px;
+            background: #fff;
+            color: #3f3f3f;
+            margin: 0 1px;
         }
 
-        .headerLeft span:nth-child(3)::before {
-            background: url(img/header/headerMenu2.png) no-repeat;
+        .pageNum {
+            padding: 14px 20px;
+            font-size: 14px;
+            background: #fff;
+            color: #3f3f3f;
         }
 
-        .headerLeft span:nth-child(4)::before {
-            background: url(img/header/headerMenu3.png) no-repeat;
+        .pageNumCur {
+            background: #2e3f4f;
+            color: #fff;
         }
 
-        .headerRight {
-            float: right;
+        .lastPage:hover, .nextPage:hover, .pageNum:hover {
+            text-decoration: underline;
             cursor: pointer;
-
-        }
-
-        .headerHome {
-            margin: 15px 0px;
-            height: 30px;
-            line-height: 30px;
-            width: 110px;
-            margin-bottom: 20px;
-            border: 1px dashed white;
-            border-radius: 5px;
-            background: url(img/header/pc.png) 5px center no-repeat;
-            background-size: contain;
-            color: white;
-            box-sizing: border-box;
-            padding: 0px 0px 0px 34px;
         }
     </style>
 </head>
 <body>
 <!--测试版心-->
-<div class='innerC'></div>
-
-
-<div class="header">
-    <div class='headerInnerC'>
-        <div class="headerLeft">
-            <img class='headerLogo' src="img/index/logo.png"/><span>产品</span><span>品牌</span><span>分类</span>
-        </div>
-        <div class="headerRight">
-            <div class="headerHome">个人中心</div>
-        </div>
+<!--<div class='innerC'></div>-->
+<div class="header"></div>
+<div class='listCon'>
+    <div class='list'></div>
+    <div style="clear: both" class='pageClickBar'>
+        <span class='lastPage'>上一页</span>
+        <span class='pageNum pageNumCur'>1</span>
+        <span class='pageNum'>2</span>
+        <span>...</span>
+        <span class='pageNum'>99</span>
+        <span class='nextPage'>下一页</span>
     </div>
-
 </div>
+<div class='footer'></div>
 
-</div>
+<script src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src='js/tool/fastclick.js'></script>
+<script src="js/searchToJson/searchToJson.js"></script>
+<script src="js/globalManager/globalManager.js"></script>
+<script src='js/constant/jimiHost.js'></script>
+<script src='js/controller/controller.js'></script>
+
+<link rel="stylesheet" href="js/viewModel/radarHeader/radarHeader.css"/>
+<script src='js/viewModel/radarHeader/radarHeader.js'></script>
+<link rel="stylesheet" href="js/viewModel/radarList/radarList.css"/>
+<script src='js/viewModel/radarList/radarList.js'></script>
+<script src='js/viewModel/radarFooter/radarFooter.js'></script>
+<script src='js/viewModel/pageClickBar/pageClickBar.js'></script>
+<script>
+    $(function () {
+        var radarHeader = new RadarHeader('.header');
+        var radarFooter = new RadarFooter('.footer');
+//        var pageClickBar = new RadarFooter('.pageClickBar', {pageNum: 99});
+
+        $.ajax({
+            type: "get",
+            url: 'json/list.js',
+//            data: params,
+            dataType: "jsonp",
+            jsonp: "callback",
+            jsonpCallback: "jsonpcallback",
+            success: function (data) {
+                console.log(JSON.stringify(data));
+                var radarList = new RadarList('.list', data);
+            },
+            error: function (err) {
+                console.log('ERROR!');
+                console.log(err);
+            }
+        });
+    })
+</script>
 </body>
 </html>

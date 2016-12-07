@@ -1,0 +1,82 @@
+
+.headerInnerC {
+    height: 60px;
+    width: 1024px;
+    /*border: 1px solid blue;*/
+    margin: 0 auto;
+}
+
+.headerLeft {
+    float: left;
+    cursor: pointer;
+}
+
+.headerLogo {
+    margin: 15px 10px 15px 0px;
+    height: 30px;
+    display: inline-block;
+    float: left;
+}
+
+.headerLeft span {
+    color: white;
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    box-sizing: border-box;
+    padding: 0 30px 0 55px;
+    font-size: 16px;
+    position: relative;
+
+}
+
+.headerLeft span:hover {
+    background: #303438;
+}
+
+.headerMenuCur {
+    background: #24272a;
+}
+
+.headerLeft span::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 17px;
+    top: 15px;
+}
+
+/*相对于父元素的第2个元素*/
+.headerLeft span:nth-child(2)::before {
+    background: url(../../../img/header/headerMenu1.png) no-repeat;
+}
+
+.headerLeft span:nth-child(3)::before {
+    background: url(../../../img/header/headerMenu2.png) no-repeat;
+}
+
+.headerLeft span:nth-child(4)::before {
+    background: url(../../../img/header/headerMenu3.png) no-repeat;
+}
+
+.headerRight {
+    float: right;
+    cursor: pointer;
+
+}
+
+.headerHome {
+    margin: 15px 0px;
+    height: 30px;
+    line-height: 30px;
+    width: 110px;
+    margin-bottom: 20px;
+    border: 1px dashed white;
+    border-radius: 5px;
+    background: url(../../../img/header/pc.png) 5px center no-repeat;
+    background-size: contain;
+    color: white;
+    box-sizing: border-box;
+    padding: 0px 0px 0px 34px;
+}

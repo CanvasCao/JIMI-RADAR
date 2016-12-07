@@ -1,0 +1,88 @@
+
+.listSec {
+    width: 220px;
+    padding: 15px 15px 20px 15px;
+    float: left;
+    background: #fff;
+    cursor: pointer;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    transition: all 0.4s;
+    height: 450px;
+    margin: 0px 15px 15px 0;
+}
+
+.listSec:hover {
+    box-shadow: 2px 5px 15px #d9e0e7;
+}
+
+.proImg {
+    text-align: center;
+}
+
+.pname {
+    height: 44px;
+}
+
+.pname:hover {
+    text-decoration: underline;
+    color: #647ea0;
+}
+
+.rpTime {
+    font-size: 12px;
+}
+
+.tri {
+    background: #373b40;
+    box-sizing: border-box;
+    padding: 3px 3px;
+    font-size: 12px;
+    color: white;
+    position: relative;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.tri::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 11px solid transparent;
+    border-left: 8px solid #373b40;
+
+}
+
+.statCir {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 3px solid #f1f4f7;
+    border-radius: 50%;
+    float: left;
+}
+
+.statYear {
+    margin-top: 18px;
+}
+
+.statDay {
+    text-align: center;
+    font-size: 34px;
+    color: #647ea0;
+    line-height: 34px;
+}
+
+.statLine {
+    display: inline-block;
+    width: 20px;
+    height: 100px;
+    line-height: 100px;
+    float: left;
+    text-align: center;
+}
