@@ -54,6 +54,9 @@
                 $(this).addClass('headerMenuCur').siblings('span').removeClass('headerMenuCur');
             });
 
+            $(this.C).find('.headerLogo').click(function () {
+                location.href = 'productList.html';
+            })
 
 
         }

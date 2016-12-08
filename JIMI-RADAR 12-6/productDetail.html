@@ -21,13 +21,242 @@
             transform: translateX(-50%);
             pointer-events: none;
         }
+
+        .contentInnerC {
+            width: 1024px;
+            margin: 0 auto;
+            /*border: 1px solid #000;*/
+
+        }
+
+        /*************************************************************************************/
+        .reportTitle {
+            box-sizing: border-box;
+            padding: 30px 0 20px;
+        }
+
+        .reportLeft {
+            float: left;
+            font-size: 14px;
+            color: #575757;
+        }
+
+        .reportRight {
+            float: right;
+            font-size: 14px;
+            color: #575757;
+        }
+
+        .reportUpdate {
+            margin-left: 10px;
+            padding: 4px 8px;
+            background: #575757;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .proParameterCon {
+            background: white;
+            padding: 15px 0px;
+            box-sizing: border-box;
+            margin-bottom: 1px;
+        }
+
+        .proImg {
+            float: left;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            box-sizing: border-box;
+            margin: 0 20px;
+        }
+
+        .proParameter {
+            float: left;
+            width: 590px;
+            height: 200px;
+            box-sizing: border-box;
+            color: #757575;
+        }
+
+        .proParaChiName {
+            font-size: 18px;
+            color: #3f3f3f;
+            font-weight: bold;
+            line-height: 24px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+
+        .proParaEngName {
+            margin-bottom: 10px;
+        }
+
+        .proParaRow {
+            box-sizing: border-box;
+            /*border: 1px solid #000;*/
+            margin-bottom: 10px;
+
+        }
+
+        .proParaRow span {
+            width: 50%;
+            box-sizing: border-box;
+            /*border: 1px solid red;*/
+            display: inline-block;
+            vertical-align: text-top;
+            word-break: break-all;
+        }
+
+        .proDownload {
+            float: right;
+            width: 190px;
+            height: 200px;
+            box-sizing: border-box;
+            margin: 0 0px;
+            text-align: center;
+            /*border: 1px solid #000;*/
+            position: relative;
+        }
+
+        .proDownloadBtn {
+            cursor: pointer;
+            background: #647ea0;
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            width: 120px;
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
+            -ms-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        /*************************************************************************************/
+
+        /*************************************************************************************/
+        .proDetail {
+            background: white;
+        }
+
+        .proDetailMenu {
+            float: left;
+            width: 180px;
+            /*border: 1px solid #000;*/
+            box-sizing: border-box;
+            background: #373b40;
+            color: white;
+        }
+
+        .proDetailMenu li {
+            display: block;
+            box-sizing: border-box;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 16px;
+            position: relative;
+        }
+
+        .proDetailMenuCur {
+            border-top: 2px solid #4b5157;
+            border-bottom: 5px solid #2b2e32;
+        }
+
+        .proDetailMenuCur::after {
+            content: "";
+            position: absolute;
+            right: -10px;
+            top: 0;
+            border-top: 30px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 10px solid #373b40;
+        }
+
+        .proDetailContent {
+            float: left;
+            /*1024-180*/
+            width: 844px;
+            /*border: 1px solid #000;*/
+            box-sizing: border-box;
+            padding: 30px 20px 30px 50px;
+        }
+
+        .proDetailContent > div {
+            display: none;
+        }
+
+        #canvasWordCloud {
+            width: 600px;
+            height: 400px;
+            border: 1px solid #000;
+        }
     </style>
 </head>
 <body>
 <!--测试版心-->
 <!--<div class='innerC'></div>-->
 <div class="header"></div>
-<div class='aaa'>123123</div>
+<div class='contentInnerC'>
+    <div class='reportTitle'>
+        <div class='reportLeft'>您的报告列表 > SK-II环采臻皙钻白精华露</div>
+        <div class='reportRight'>报告统计时间：2016年9月14日--21016年9月20日<span class='reportUpdate'>要求更新</span></div>
+        <div style="clear: both;"></div>
+    </div>
+
+    <div class='proParameterCon'>
+        <span class='proImg'>
+            <img height="200"
+                 src="https://img10.360buyimg.com/n1/s448x448_jfs/t3673/82/1612053427/225830/da8ad713/582abf0fNf251abab.jpg"/>
+        </span>
+        <span class='proParameter'>
+            <div class="proParaChiName">兰芝(LANEIGE)夜间保湿修护唇膜 20g</div>
+            <div class="proParaEngName">英文名：YSL ROUGE PUR COUTURE SATIN RADIANCE LIPSTICK ROUGE ROSE</div>
+            <div class="proParaRow">
+                <span>所属品牌：Yves Saint Laurent </span><span>所属企业：欧莱雅（中国）有限公司</span>
+            </div>
+            <div class="proParaRow">
+                <span>分类：唇膏</span><span>规格：3.8g</span>
+            </div>
+            <div class="proParaRow">
+                <span>当前市场参考价：中国官方售价¥320 </span><span>采集样本数量：1203566</span>
+            </div>
+        </span>
+        <span class='proDownload'>
+            <div class='proDownloadBtn'>下载报告</div>
+        </span>
+
+        <div style="clear: both;"></div>
+    </div>
+    <div class='proDetail'>
+        <div class='proDetailMenu'>
+            <ul>
+                <li class='proDetailMenuCur'>产品风评</li>
+                <li>功效传达</li>
+                <li>价格认可度</li>
+                <li>消费者画像</li>
+                <li>核心成分</li>
+                <li>营销曝光</li>
+                <li>影响力</li>
+            </ul>
+        </div>
+        <div class='proDetailContent'>
+            <div class='proDetailLi'>
+                <div id="canvasWordCloud"></div>
+            </div>
+            <div class='proDetailLi'>功效传达</div>
+            <div class='proDetailLi'>价格认可度</div>
+            <div class='proDetailLi'>消费者画像</div>
+            <div class='proDetailLi'>核心成分</div>
+            <div class='proDetailLi'>营销曝光</div>
+            <div class='proDetailLi'>影响力</div>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+</div>
 <div class='footer'></div>
 
 
@@ -47,7 +276,69 @@
         var radarHeader = new RadarHeader('.header');
         var radarFooter = new RadarFooter('.footer');
 
+
+        //init
+
+        $('.proDetailContent .proDetailLi').eq(0).show().siblings().hide();
+        $('.proDetailMenu li').click(function () {
+            var index = $(this).index();
+            $('.proDetailContent .proDetailLi').eq(index).show().siblings().hide();
+            $(this).addClass('proDetailMenuCur').siblings().removeClass('proDetailMenuCur');
+        })
+
+
     })
+</script>
+
+<script src='js/tool/echarts-all.js'></script>
+<script>
+    var myChart = echarts.init(document.getElementById('canvasWordCloud'));
+
+    var fakeJson = {"黑头": 21, "油脂": 22, "护理": 29, "保湿": 4, "好用": 8, "讨厌": 2, "毛孔": 41, "肌肤": 49, "天然": 7, "痘痘": 3};
+
+    var data = [];
+    for (var k in fakeJson) {
+        var color = createRandomItemStyle();
+        data.push({
+            name: k,
+            value: fakeJson[k] * 8,
+            itemStyle: createRandomItemStyle(),
+        });
+    }
+
+    function createRandomItemStyle() {
+        return {
+            normal: {
+                color: 'rgb(' + [
+                    Math.round(Math.random() * 160),
+                    Math.round(Math.random() * 160),
+                    Math.round(Math.random() * 160)
+                ].join(',') + ')'
+            }
+        };
+    }
+
+    var option = {
+        title: {
+            text: '娇韵诗莲花面部护理油',
+        },
+        tooltip: {
+            show: false,
+        },
+        series: [{
+            name: 'Google Trends',
+            type: 'wordCloud',
+            size: ['100%', '100%'],
+            textRotation: [0, 45, 90, -45],
+            textPadding: 1,
+            autoSize: {
+                enable: true,
+                minSize: 14
+            },
+            data: data,
+        }]
+    };
+    myChart.setOption(option);
 </script>
 
 </body>

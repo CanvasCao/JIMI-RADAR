@@ -68,7 +68,8 @@
 
             $(this.C).find('.listSec').click(function () {
                 var that = this;
-                alert($(that).attr('data-pid'));
+
+                w.location.href = 'productDetail.html';
             })
         }
     }

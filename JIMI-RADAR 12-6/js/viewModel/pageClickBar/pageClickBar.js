@@ -28,7 +28,7 @@
         },
         createDom: function () {
             var that = this;
-            $(this.C).html();
+            //$(this.C).html();
 
         },
         initCSS: function () {

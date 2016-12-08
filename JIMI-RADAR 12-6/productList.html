@@ -27,6 +27,7 @@
             padding: 15px 0px;
         }
 
+        /*listInnerC*/
         .list {
             width: 1064px;
             margin: 0 auto;
@@ -102,7 +103,7 @@
     $(function () {
         var radarHeader = new RadarHeader('.header');
         var radarFooter = new RadarFooter('.footer');
-//        var pageClickBar = new RadarFooter('.pageClickBar', {pageNum: 99});
+        var pageClickBar = new PageClickBar('.pageClickBar', {pageNum: 99});
 
         $.ajax({
             type: "get",
