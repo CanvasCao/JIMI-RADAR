@@ -182,7 +182,7 @@
             width: 844px;
             /*border: 1px solid #000;*/
             box-sizing: border-box;
-            padding: 30px 20px 30px 50px;
+            padding: 0 20px 30px 50px;
         }
 
         .proDetailContent > div {
@@ -192,7 +192,7 @@
         #canvasWordCloud {
             width: 600px;
             height: 400px;
-            border: 1px solid #000;
+            border: 1px solid #999999;
         }
     </style>
 </head>
@@ -294,8 +294,7 @@
 <script>
     var myChart = echarts.init(document.getElementById('canvasWordCloud'));
 
-    var fakeJson = {"黑头": 21, "油脂": 22, "护理": 29, "保湿": 4, "好用": 8, "讨厌": 2, "毛孔": 41, "肌肤": 49, "天然": 7, "痘痘": 3};
-
+    var fakeJson = {"一小瓶": 4, "塑料": 14, "精致": 81, "单独包装": 1, "玻璃": 18, "好看": 8, "一瓶": 275, "优雅": 32, "金属": 10}
     var data = [];
     for (var k in fakeJson) {
         var color = createRandomItemStyle();
@@ -320,7 +319,10 @@
 
     var option = {
         title: {
-            text: '娇韵诗莲花面部护理油',
+            text: '兰蔻小黑瓶精华肌底液',
+            textStyle:{
+                fontFamily: '微软雅黑',
+            }
         },
         tooltip: {
             show: false,
@@ -333,7 +335,7 @@
             textPadding: 1,
             autoSize: {
                 enable: true,
-                minSize: 14
+                minSize: 16
             },
             data: data,
         }]
