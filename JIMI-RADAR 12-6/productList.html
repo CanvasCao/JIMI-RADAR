@@ -114,7 +114,8 @@
             jsonpCallback: "jsonpcallback",
             success: function (data) {
                 console.log(JSON.stringify(data));
-                var radarList = new RadarList('.list', data);
+                var pro=data.data[0];
+                var radarList = new RadarList('.list', {data:[pro,pro,pro,pro,pro]});
             },
             error: function (err) {
                 console.log('ERROR!');

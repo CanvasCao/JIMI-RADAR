@@ -10,6 +10,8 @@
 (function (w, d, $, undefined) {
     function RadarList(container, data) {
         this.C = this.container = (typeof container == 'string') ? $(container) : container;
+
+        console.log(data)
         this.data = data || {};
         this.proArr = this.data.data;
         this.config = {};

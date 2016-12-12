@@ -145,7 +145,7 @@
 
         .proDetailMenu {
             float: left;
-            width: 180px;
+            width: 200px;
             /*border: 1px solid #000;*/
             box-sizing: border-box;
             background: #373b40;
@@ -179,20 +179,31 @@
         .proDetailContent {
             float: left;
             /*1024-180*/
-            width: 844px;
+            width: 600px;
             /*border: 1px solid #000;*/
             box-sizing: border-box;
-            padding: 0 20px 30px 50px;
+            padding: 0 50px 30px 50px;
         }
 
         .proDetailContent > div {
             display: none;
         }
 
-        #canvasWordCloud {
+        .canvasObj {
+            margin-bottom: 50px;
+        }
+
+        .canvasDesc {
+            font-size: 20px;
+            font-weight: bold;
+            box-sizing: border-box;
+            padding: 15px 0;
+        }
+
+        .canvasCon {
             width: 600px;
             height: 400px;
-            border: 1px solid #999999;
+
         }
     </style>
 </head>
@@ -202,7 +213,7 @@
 <div class="header"></div>
 <div class='contentInnerC'>
     <div class='reportTitle'>
-        <div class='reportLeft'>您的报告列表 > SK-II环采臻皙钻白精华露</div>
+        <div class='reportLeft'>您的报告列表 > 兰蔻 新精华肌底液</div>
         <div class='reportRight'>报告统计时间：2016年9月14日--21016年9月20日<span class='reportUpdate'>要求更新</span></div>
         <div style="clear: both;"></div>
     </div>
@@ -210,19 +221,19 @@
     <div class='proParameterCon'>
         <span class='proImg'>
             <img height="200"
-                 src="https://img10.360buyimg.com/n1/s448x448_jfs/t3673/82/1612053427/225830/da8ad713/582abf0fNf251abab.jpg"/>
+                 src="img/productDetail/1.jpg"/>
         </span>
         <span class='proParameter'>
-            <div class="proParaChiName">兰芝(LANEIGE)夜间保湿修护唇膜 20g</div>
-            <div class="proParaEngName">英文名：YSL ROUGE PUR COUTURE SATIN RADIANCE LIPSTICK ROUGE ROSE</div>
+            <div class="proParaChiName">兰蔻 新精华肌底液</div>
+            <div class="proParaEngName">英文名：ADVANCED GENIFIQUE</div>
             <div class="proParaRow">
-                <span>所属品牌：Yves Saint Laurent </span><span>所属企业：欧莱雅（中国）有限公司</span>
+                <span>所属品牌：Lancome </span><span>所属企业：兰蔻（中国）有限公司</span>
             </div>
             <div class="proParaRow">
-                <span>分类：唇膏</span><span>规格：3.8g</span>
+                <span>分类： 护肤 / 肌底液</span><span>规格：30ml</span>
             </div>
             <div class="proParaRow">
-                <span>当前市场参考价：中国官方售价¥320 </span><span>采集样本数量：1203566</span>
+                <span>当前市场参考价：中国官方售价￥760 </span><span>采集样本数量：4321</span>
             </div>
         </span>
         <span class='proDownload'>
@@ -245,9 +256,33 @@
         </div>
         <div class='proDetailContent'>
             <div class='proDetailLi'>
-                <div id="canvasWordCloud"></div>
+                <div class='canvasObj'>
+                    <div class='canvasDesc'>▎外形 (包装)</div>
+                    <div class='canvasCon' id="canvasOutlook"></div>
+                </div>
+                <div class='canvasObj'>
+                    <div class='canvasDesc'>▎气味</div>
+                    <div class='canvasCon' id="canvasSmell"></div>
+                </div>
+                <div class='canvasObj'>
+                    <div class='canvasDesc'>▎质地</div>
+                    <div class='canvasCon' id="canvasTexture"></div>
+                </div>
+                <div class='canvasObj'>
+                    <div class='canvasDesc'>▎使用感受</div>
+                    <div class='canvasCon' id="canvasUseFeeling"></div>
+                </div>
+                <div class='canvasObj'>
+                    <div class='canvasDesc'>▎使用方法</div>
+                    <div>暂无</div>
+                </div>
             </div>
-            <div class='proDetailLi'>功效传达</div>
+            <div class='proDetailLi'>
+                <div class='canvasObj'>
+                    <div class='canvasDesc'>▎外形 (包装)</div>
+                    <div class='canvasCon' id="canvasOutlook"></div>
+                </div>
+            </div>
             <div class='proDetailLi'>价格认可度</div>
             <div class='proDetailLi'>消费者画像</div>
             <div class='proDetailLi'>核心成分</div>
@@ -271,76 +306,434 @@
 <link rel="stylesheet" href="js/viewModel/radarHeader/radarHeader.css"/>
 <script src='js/viewModel/radarHeader/radarHeader.js'></script>
 
+<script src='js/echarts/echarts.min.js'></script>
+<script src='js/echarts/wordCloud.js'></script>
+<script src='js/echarts/jimiEcharts.js'></script>
 <script>
     $(function () {
+        //jQueryDom.........................................
         var radarHeader = new RadarHeader('.header');
         var radarFooter = new RadarFooter('.footer');
 
-
-        //init
-
-        $('.proDetailContent .proDetailLi').eq(0).show().siblings().hide();
+        //bindEvent.........................................
         $('.proDetailMenu li').click(function () {
             var index = $(this).index();
             $('.proDetailContent .proDetailLi').eq(index).show().siblings().hide();
+            canvasInitArr[index]();
             $(this).addClass('proDetailMenuCur').siblings().removeClass('proDetailMenuCur');
         })
 
+        //canvasInitArr 初始化canvas数组 左侧Menu点击调用............................
+        var canvasInitArr = [
+            //0....................
+            function () {
+                //Page1 产品风评.....................................
+                JME.drawWordCloud({
+                    domId: 'canvasOutlook',
+                    dataJson: {
+                        "专柜": 75,
+                        "不好看": 1,
+                        "高端大气": 7,
+                        "标志": 55,
+                        "简陋": 2,
+                        "粉扑": 1,
+                        "旅行装": 1,
+                        "滴管": 150,
+                        "气垫": 6,
+                        "logo": 7,
+                        "一罐": 1,
+                        "好看": 8,
+                        "镜子": 11,
+                        "吸铁石": 1,
+                        "圆形": 5,
+                        "精致": 81,
+                        "塑料": 14,
+                        "难看": 3,
+                        "限量版": 5,
+                        "按钮": 3,
+                        "经典": 101,
+                        "携带方便": 3,
+                        "双管": 1,
+                        "磁铁": 3,
+                        "明星": 160,
+                        "优雅": 32,
+                        "小巧": 19,
+                        "一瓶": 275,
+                        "有质感": 4,
+                        "畅销": 11,
+                        "金属": 10,
+                        "一小瓶": 4,
+                        "人气": 2,
+                        "高大上": 34,
+                        "单独包装": 1,
+                        "玻璃": 18,
+                        "奢华": 14,
+                        "可爱": 25,
+                        "高档": 20,
+                        "很好看": 2,
+                        "简单": 63
+                    },
+                    imgUrl: "img/echarts/circle.png",
+                    titleText: null,
+                    rgblist: {r: 100,}
+                })
 
+                JME.drawWordCloud({
+                    domId: 'canvasSmell',
+                    dataJson: {
+                        "味道好闻": 1,
+                        "花香": 4,
+                        "很好闻": 29,
+                        "脂粉味": 1,
+                        "化学香精": 1,
+                        "酵母": 91,
+                        "没味道": 2,
+                        "淡香": 5,
+                        "挺好闻": 2,
+                        "没什么味道": 3,
+                        "香味清新": 3,
+                        "无香": 1,
+                        "玫瑰": 86,
+                        "没什么香味": 2,
+                        "没有酒精": 2,
+                        "很淡的香": 1,
+                        "很香": 2,
+                        "清淡的香": 1,
+                        "没有味道": 8,
+                        "发酵": 12,
+                        "没有任何的香味": 2,
+                        "清新的香": 1,
+                        "难闻": 4,
+                        "味道很清新": 1,
+                        "甜": 7,
+                        "淡淡的香": 61
+                    },
+                    imgUrl: "img/echarts/circle.png",
+                    titleText: null,
+                    rgblist: {g: 100,}
+                })
+
+                JME.drawWordCloud({
+                    domId: 'canvasTexture',
+                    dataJson: {
+                        "浓稠": 28,
+                        "有点稠": 4,
+                        "无油": 6,
+                        "粘粘": 3,
+                        "流动性差": 1,
+                        "轻薄": 70,
+                        "像水": 11,
+                        "清爽": 243,
+                        "液体": 95,
+                        "凝霜": 52,
+                        "黏腻": 51,
+                        "乳液": 71,
+                        "延展性好": 14,
+                        "比较厚": 2,
+                        "霜状": 3,
+                        "黏黏": 9,
+                        "轻盈": 51,
+                        "稀薄": 23,
+                        "着哩": 2,
+                        "凝露": 5,
+                        "流动性好": 2,
+                        "丰盈": 70,
+                        "乳状": 3,
+                        "水状": 18,
+                        "厚重": 10,
+                        "流动性还不错": 1,
+                        "延展性不错": 8,
+                        "像清水": 1,
+                        "啫喱": 10,
+                        "厚实": 4,
+                        "膏状": 1,
+                        "胶状": 2,
+                        "粘稠": 60,
+                        "面霜": 111,
+                        "泥": 27,
+                        "液状": 11,
+                        "流动性强": 5,
+                        "丰润": 1,
+                        "膏体": 1,
+                        "凝胶": 3,
+                        "泡沫": 2
+                    },
+                    imgUrl: "img/echarts/circle.png",
+                    titleText: null,
+                    rgblist: {b: 100,}
+                })
+
+                JME.drawWordCloud({
+                    domId: 'canvasUseFeeling',
+                    dataJson: {
+                        "不怎么滋润": 1,
+                        "化妆棉": 6,
+                        "不刺激": 14,
+                        "丝滑": 20,
+                        "适合敏感肌": 2,
+                        "很适合油": 2,
+                        "发粘": 2,
+                        "很自然": 7,
+                        "熟龄": 31,
+                        "会起皮": 2,
+                        "幼滑": 5,
+                        "凉凉": 5,
+                        "略干": 1,
+                        "没有油腻": 16,
+                        "有过敏反应": 1,
+                        "柔滑": 108,
+                        "太腻": 2,
+                        "顺滑": 23,
+                        "不油腻": 86,
+                        "爽滑": 9,
+                        "适合混合皮": 1,
+                        "有点腻": 2,
+                        "太干了": 4,
+                        "有点干": 4,
+                        "不适合干性": 1,
+                        "温和": 106,
+                        "适合干性": 4,
+                        "比较滋润": 2,
+                        "适合干皮": 1,
+                        "润润的": 29,
+                        "发热": 2,
+                        "滋润度很好": 2,
+                        "有点油": 1,
+                        "不经用": 2,
+                        "不油不腻": 8,
+                        "很滋润": 34,
+                        "滋润度不够": 3,
+                        "很油": 5,
+                        "滋润度好": 1,
+                        "滋润度不错": 1,
+                        "偏干": 8,
+                        "不够滋润": 2,
+                        "不过敏": 5,
+                        "很清爽": 63,
+                        "油腻腻": 3,
+                        "适合冬天": 3,
+                        "非常滋润": 8,
+                        "适合油性": 2,
+                        "用量很省": 1,
+                        "很耐用": 4,
+                        "很干": 17,
+                        "细腻": 474,
+                        "不会长脂肪粒": 2
+                    },
+                    imgUrl: "img/echarts/circle.png",
+                    titleText: null,
+                    rgblist: {r: 100, b: 100}
+                })
+            },
+            //1....................
+            function () {
+                //Page1 产品风评.....................................
+                JME.drawWordCloud({
+                    domId: 'canvasOutlook',
+                    dataJson: {
+                        "专柜": 75,
+                        "不好看": 1,
+                        "高端大气": 7,
+                        "标志": 55,
+                        "简陋": 2,
+                        "粉扑": 1,
+                        "旅行装": 1,
+                        "滴管": 150,
+                        "气垫": 6,
+                        "logo": 7,
+                        "一罐": 1,
+                        "好看": 8,
+                        "镜子": 11,
+                        "吸铁石": 1,
+                        "圆形": 5,
+                        "精致": 81,
+                        "塑料": 14,
+                        "难看": 3,
+                        "限量版": 5,
+                        "按钮": 3,
+                        "经典": 101,
+                        "携带方便": 3,
+                        "双管": 1,
+                        "磁铁": 3,
+                        "明星": 160,
+                        "优雅": 32,
+                        "小巧": 19,
+                        "一瓶": 275,
+                        "有质感": 4,
+                        "畅销": 11,
+                        "金属": 10,
+                        "一小瓶": 4,
+                        "人气": 2,
+                        "高大上": 34,
+                        "单独包装": 1,
+                        "玻璃": 18,
+                        "奢华": 14,
+                        "可爱": 25,
+                        "高档": 20,
+                        "很好看": 2,
+                        "简单": 63
+                    },
+                    imgUrl: "img/echarts/circle.png",
+                    titleText: null,
+                    rgblist: {r: 100,}
+                })
+
+                JME.drawWordCloud({
+                    domId: 'canvasSmell',
+                    dataJson: {
+                        "味道好闻": 1,
+                        "花香": 4,
+                        "很好闻": 29,
+                        "脂粉味": 1,
+                        "化学香精": 1,
+                        "酵母": 91,
+                        "没味道": 2,
+                        "淡香": 5,
+                        "挺好闻": 2,
+                        "没什么味道": 3,
+                        "香味清新": 3,
+                        "无香": 1,
+                        "玫瑰": 86,
+                        "没什么香味": 2,
+                        "没有酒精": 2,
+                        "很淡的香": 1,
+                        "很香": 2,
+                        "清淡的香": 1,
+                        "没有味道": 8,
+                        "发酵": 12,
+                        "没有任何的香味": 2,
+                        "清新的香": 1,
+                        "难闻": 4,
+                        "味道很清新": 1,
+                        "甜": 7,
+                        "淡淡的香": 61
+                    },
+                    imgUrl: "img/echarts/circle.png",
+                    titleText: null,
+                    rgblist: {g: 100,}
+                })
+
+                JME.drawWordCloud({
+                    domId: 'canvasTexture',
+                    dataJson: {
+                        "浓稠": 28,
+                        "有点稠": 4,
+                        "无油": 6,
+                        "粘粘": 3,
+                        "流动性差": 1,
+                        "轻薄": 70,
+                        "像水": 11,
+                        "清爽": 243,
+                        "液体": 95,
+                        "凝霜": 52,
+                        "黏腻": 51,
+                        "乳液": 71,
+                        "延展性好": 14,
+                        "比较厚": 2,
+                        "霜状": 3,
+                        "黏黏": 9,
+                        "轻盈": 51,
+                        "稀薄": 23,
+                        "着哩": 2,
+                        "凝露": 5,
+                        "流动性好": 2,
+                        "丰盈": 70,
+                        "乳状": 3,
+                        "水状": 18,
+                        "厚重": 10,
+                        "流动性还不错": 1,
+                        "延展性不错": 8,
+                        "像清水": 1,
+                        "啫喱": 10,
+                        "厚实": 4,
+                        "膏状": 1,
+                        "胶状": 2,
+                        "粘稠": 60,
+                        "面霜": 111,
+                        "泥": 27,
+                        "液状": 11,
+                        "流动性强": 5,
+                        "丰润": 1,
+                        "膏体": 1,
+                        "凝胶": 3,
+                        "泡沫": 2
+                    },
+                    imgUrl: "img/echarts/circle.png",
+                    titleText: null,
+                    rgblist: {b: 100,}
+                })
+
+                JME.drawWordCloud({
+                    domId: 'canvasUseFeeling',
+                    dataJson: {
+                        "不怎么滋润": 1,
+                        "化妆棉": 6,
+                        "不刺激": 14,
+                        "丝滑": 20,
+                        "适合敏感肌": 2,
+                        "很适合油": 2,
+                        "发粘": 2,
+                        "很自然": 7,
+                        "熟龄": 31,
+                        "会起皮": 2,
+                        "幼滑": 5,
+                        "凉凉": 5,
+                        "略干": 1,
+                        "没有油腻": 16,
+                        "有过敏反应": 1,
+                        "柔滑": 108,
+                        "太腻": 2,
+                        "顺滑": 23,
+                        "不油腻": 86,
+                        "爽滑": 9,
+                        "适合混合皮": 1,
+                        "有点腻": 2,
+                        "太干了": 4,
+                        "有点干": 4,
+                        "不适合干性": 1,
+                        "温和": 106,
+                        "适合干性": 4,
+                        "比较滋润": 2,
+                        "适合干皮": 1,
+                        "润润的": 29,
+                        "发热": 2,
+                        "滋润度很好": 2,
+                        "有点油": 1,
+                        "不经用": 2,
+                        "不油不腻": 8,
+                        "很滋润": 34,
+                        "滋润度不够": 3,
+                        "很油": 5,
+                        "滋润度好": 1,
+                        "滋润度不错": 1,
+                        "偏干": 8,
+                        "不够滋润": 2,
+                        "不过敏": 5,
+                        "很清爽": 63,
+                        "油腻腻": 3,
+                        "适合冬天": 3,
+                        "非常滋润": 8,
+                        "适合油性": 2,
+                        "用量很省": 1,
+                        "很耐用": 4,
+                        "很干": 17,
+                        "细腻": 474,
+                        "不会长脂肪粒": 2
+                    },
+                    imgUrl: "img/echarts/circle.png",
+                    titleText: null,
+                    rgblist: {r: 100, b: 100}
+                })
+            },
+        ];
+
+
+        //init..............................................
+        $('.proDetailMenu li').eq(0).trigger("click");
     })
 </script>
-
-<script src='js/tool/echarts-all.js'></script>
 <script>
-    var myChart = echarts.init(document.getElementById('canvasWordCloud'));
 
-    var fakeJson = {"一小瓶": 4, "塑料": 14, "精致": 81, "单独包装": 1, "玻璃": 18, "好看": 8, "一瓶": 275, "优雅": 32, "金属": 10}
-    var data = [];
-    for (var k in fakeJson) {
-        var color = createRandomItemStyle();
-        data.push({
-            name: k,
-            value: fakeJson[k] * 8,
-            itemStyle: createRandomItemStyle(),
-        });
-    }
-
-    function createRandomItemStyle() {
-        return {
-            normal: {
-                color: 'rgb(' + [
-                    Math.round(Math.random() * 160),
-                    Math.round(Math.random() * 160),
-                    Math.round(Math.random() * 160)
-                ].join(',') + ')'
-            }
-        };
-    }
-
-    var option = {
-        title: {
-            text: '兰蔻小黑瓶精华肌底液',
-            textStyle:{
-                fontFamily: '微软雅黑',
-            }
-        },
-        tooltip: {
-            show: false,
-        },
-        series: [{
-            name: 'Google Trends',
-            type: 'wordCloud',
-            size: ['100%', '100%'],
-            textRotation: [0, 45, 90, -45],
-            textPadding: 1,
-            autoSize: {
-                enable: true,
-                minSize: 16
-            },
-            data: data,
-        }]
-    };
-    myChart.setOption(option);
 </script>
 
 </body>
