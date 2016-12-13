@@ -84,5 +84,129 @@
             myChart.setOption(option);
         }
     };
+    JME.drawPriceLine = function (json) {
+        var domId = json.domId,
+            dataJson = json.dataJson,
+            imgUrl = json.imgUrl,
+            titleText = json.titleText || '关键词提及指数';
+
+
+        option = {
+            //title: {
+            //    text: titleText,
+            //},
+            backgroundColor: '#f3f3f3',
+            color: ['#333', '#666', '#999',],
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            legend: {
+                show: true,
+                data: ['天猫', '京东', '1号店']
+            },
+            grid: {
+                left: '2%',
+                right: '2%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['12-8', '12-9', '12-10', '12-11', '12-12', '12-13', '12-14']
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value'
+                }
+            ],
+            series: [
+                {
+                    name: '天猫',
+                    type: 'bar',
+                    barCategoryGap: '30%',
+                    data: [320, 332, 301, 334, 390, 330, 320]
+                },
+                {
+                    name: '京东',
+                    type: 'bar',
+                    barCategoryGap: '30%',
+                    data: [120, 132, 101, 134, 90, 230, 210]
+                },
+                {
+                    name: '1号店',
+                    type: 'bar',
+                    barCategoryGap: '30%',
+                    data: [220, 182, 191, 234, 290, 330, 310]
+                },
+            ]
+        };
+        var myChart = echarts.init(document.getElementById(domId));
+        myChart.setOption(option);
+    };
+    JME.drawPie = function (json) {
+        var domId = json.domId,
+            dataJson = json.dataJson,
+            imgUrl = json.imgUrl,
+            titleText = json.titleText;
+        seriesName = json.seriesName || "";
+
+
+        var legendData = [];
+        var seriesData = [];
+        for (k in dataJson) {
+            legendData.push(k);
+            seriesData.push({
+                value: dataJson[k],
+                name: k,
+            });
+        }
+
+        var option = {
+            backgroundColor: '#f3f3f3',
+            title: {
+                text: titleText,
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'left',
+                data: legendData
+            },
+            series: [
+                {
+                    name: seriesName,
+                    type: 'pie',
+                    radius: '52%',
+                    center: ['50%', '60%'],
+                    data: seriesData,
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    },
+                    //外圈引导图的样式
+                    labelLine: {
+                        normal: {
+                            length: 10,
+                            length2: 10
+                        }
+                    }
+                }
+            ]
+        };
+
+        var myChart = echarts.init(document.getElementById(domId));
+        myChart.setOption(option);
+    };
     w.JME = JME;
 })(window, document, $)
