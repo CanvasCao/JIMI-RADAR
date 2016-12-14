@@ -21,27 +21,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="productDetail.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="productDetail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/productDetail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43184713">
-              <caret line="330" column="22" selection-start-line="330" selection-start-column="22" selection-end-line="330" selection-end-column="22" />
+            <state vertical-scroll-proportion="-21.862068">
+              <caret line="163" column="28" selection-start-line="163" selection-start-column="28" selection-end-line="163" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#div#1;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#4;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#1;n#div#4;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#12497#13018#0" expanded="false" />
-                <element signature="e#13154#19948#0" expanded="false" />
-                <element signature="e#13332#14746#0" expanded="false" />
-                <element signature="e#15021#15941#0" expanded="false" />
-                <element signature="e#16219#17632#0" expanded="false" />
-                <element signature="e#17913#19768#0" expanded="false" />
-                <element signature="e#20014#27110#0" expanded="false" />
-                <element signature="e#20125#22799#0" expanded="false" />
-                <element signature="e#23089#24195#0" expanded="false" />
-                <element signature="e#24473#25551#0" expanded="false" />
-                <element signature="e#25828#26929#0" expanded="false" />
-                <element signature="e#27486#28088#0" expanded="false" />
+                <element signature="e#14376#14897#0" expanded="false" />
+                <element signature="e#15033#21827#0" expanded="false" />
+                <element signature="e#15211#16625#0" expanded="false" />
+                <element signature="e#16900#17820#0" expanded="false" />
+                <element signature="e#18098#19511#0" expanded="false" />
+                <element signature="e#19792#21647#0" expanded="false" />
+                <element signature="e#21893#28989#0" expanded="false" />
+                <element signature="e#22004#24678#0" expanded="false" />
+                <element signature="e#24968#26074#0" expanded="false" />
+                <element signature="e#26352#27430#0" expanded="false" />
+                <element signature="e#27707#28808#0" expanded="false" />
+                <element signature="e#29056#30094#0" expanded="false" />
+                <element signature="e#29311#29913#0" expanded="false" />
+                <element signature="e#30159#31658#0" expanded="false" />
+                <element signature="e#31724#34488#0" expanded="false" />
+                <element signature="e#34554#34841#0" expanded="false" />
+                <element signature="e#35021#36435#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -51,63 +59,20 @@
         <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/js/echarts/jimiEcharts.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+              <caret line="107" column="41" selection-start-line="107" selection-start-column="41" selection-end-line="107" selection-end-column="41" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#248#2609#0" expanded="false" />
-                <element signature="e#2651#4558#0" expanded="false" />
+                <element signature="e#6699#8448#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.2758621">
-              <caret line="100" column="32" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/json/list.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productList.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/productList.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.793104">
-              <caret line="121" column="33" selection-start-line="121" selection-start-column="33" selection-end-line="121" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="radarList.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/js/viewModel/radarList/radarList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="1" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="radarList.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/js/viewModel/radarList/radarList.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="25" selection-start-line="7" selection-start-column="3" selection-end-line="10" selection-end-column="25" />
+            <state vertical-scroll-proportion="1.7566879">
+              <caret line="216" column="14" selection-start-line="216" selection-start-column="14" selection-end-line="216" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -138,7 +103,6 @@
         <option value="$PROJECT_DIR$/JIMI-RADAR 12-6/js/viewModel/radarFooter/radarFooter.js" />
         <option value="$PROJECT_DIR$/JIMI-RADAR 12-6/js/viewModel/pageClickBar/pageClickBar.js" />
         <option value="$PROJECT_DIR$/JIMI-RADAR 12-6/css/main.css" />
-        <option value="$PROJECT_DIR$/JIMI-RADAR 12-6/index.html" />
         <option value="$PROJECT_DIR$/JIMI-RADAR 12-6/js/viewModel/radarHeader/radarHeader.js" />
         <option value="&lt;61ae2ff6-7688-403f-8296-a6adac721f08&gt;/var/www/html/workerman/jimi/apps_T1/JIMI-RADAR/productDetail.html" />
         <option value="$PROJECT_DIR$/JIMI-RADAR 12-6/json/list.js" />
@@ -147,6 +111,10 @@
         <option value="$PROJECT_DIR$/JIMI-RADAR 12-6/productList.html" />
         <option value="$PROJECT_DIR$/JIMI-RADAR 12-6/json/part.js" />
         <option value="$PROJECT_DIR$/aaa.html" />
+        <option value="$PROJECT_DIR$/JIMI-RADAR 12-6/js/constant/jimiHost.js" />
+        <option value="$PROJECT_DIR$/JIMI-RADAR 12-6/js/viewModel/composition/spa-middleComponent.js" />
+        <option value="&lt;61ae2ff6-7688-403f-8296-a6adac721f08&gt;/var/www/html/workerman/jimi/apps_T1/JIMI-RADAR/index.html" />
+        <option value="$PROJECT_DIR$/JIMI-RADAR 12-6/index.html" />
         <option value="$PROJECT_DIR$/JIMI-RADAR 12-6/js/echarts/jimiEcharts.js" />
         <option value="$PROJECT_DIR$/JIMI-RADAR 12-6/productDetail.html" />
       </list>
@@ -188,8 +156,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -222,104 +190,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JIMI-RADAR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JIMI-RADAR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JIMI-RADAR 12-6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="json" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JIMI-RADAR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JIMI-RADAR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JIMI-RADAR 12-6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JIMI-RADAR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JIMI-RADAR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JIMI-RADAR 12-6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JIMI-RADAR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JIMI-RADAR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JIMI-RADAR 12-6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="productDetail" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JIMI-RADAR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JIMI-RADAR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JIMI-RADAR 12-6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="echarts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -328,7 +198,7 @@
     <property name="options.lastSelected" value="configurable.group.appearance" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JIMI.LA.INDEX/OfficialWebSite" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JIMI-HTML/CompositionDistribution" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
@@ -344,11 +214,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\JIMI-RADAR\JIMI-RADAR 12-6\js\viewModel\composition" />
+      <recent name="C:\Users\Administrator\Desktop\JIMI-RADAR\JIMI-RADAR 12-6\img\index" />
+      <recent name="C:\Users\Administrator\Desktop\JIMI-RADAR\JIMI-RADAR 12-6\js\tool" />
       <recent name="C:\Users\Administrator\Desktop\JIMI-RADAR\JIMI-RADAR 12-6\img\echarts" />
       <recent name="C:\Users\Administrator\Desktop\JIMI-RADAR\JIMI-RADAR 12-6\img\productDetail" />
-      <recent name="C:\Users\Administrator\Desktop\JIMI-RADAR\JIMI-RADAR 12-6\js\echarts" />
-      <recent name="C:\Users\Administrator\Desktop\JIMI-RADAR\JIMI-RADAR 12-6\js\tool" />
-      <recent name="C:\Users\Administrator\Desktop\JIMI-RADAR\JIMI-RADAR 12-6" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\JIMI-RADAR\JIMI-RADAR 12-6\img" />
@@ -414,8 +284,8 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21321961" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26865673" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21321961" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27132195" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.08864865" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -451,29 +321,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/productList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="121" column="33" selection-start-line="121" selection-start-column="33" selection-end-line="121" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/js/viewModel/radarList/radarList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/js/viewModel/radarList/radarList.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -489,19 +341,27 @@
           <folding>
             <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#1;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#4;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#4;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#12497#13018#0" expanded="false" />
-            <element signature="e#13154#19948#0" expanded="false" />
-            <element signature="e#13332#14746#0" expanded="false" />
-            <element signature="e#15021#15941#0" expanded="false" />
-            <element signature="e#16219#17632#0" expanded="false" />
-            <element signature="e#17913#19768#0" expanded="false" />
-            <element signature="e#20014#27110#0" expanded="false" />
-            <element signature="e#20125#22799#0" expanded="false" />
-            <element signature="e#23089#24195#0" expanded="false" />
-            <element signature="e#24473#25551#0" expanded="false" />
-            <element signature="e#25828#26929#0" expanded="false" />
-            <element signature="e#27486#28088#0" expanded="false" />
+            <element signature="e#14376#14897#0" expanded="false" />
+            <element signature="e#15033#21827#0" expanded="false" />
+            <element signature="e#15211#16625#0" expanded="false" />
+            <element signature="e#16900#17820#0" expanded="false" />
+            <element signature="e#18098#19511#0" expanded="false" />
+            <element signature="e#19792#21647#0" expanded="false" />
+            <element signature="e#21893#28989#0" expanded="false" />
+            <element signature="e#22004#24678#0" expanded="false" />
+            <element signature="e#24968#26074#0" expanded="false" />
+            <element signature="e#26352#27430#0" expanded="false" />
+            <element signature="e#27707#28808#0" expanded="false" />
+            <element signature="e#29056#30094#0" expanded="false" />
+            <element signature="e#29311#29913#0" expanded="false" />
+            <element signature="e#30159#31658#0" expanded="false" />
+            <element signature="e#31724#34488#0" expanded="false" />
+            <element signature="e#34554#34841#0" expanded="false" />
+            <element signature="e#35021#36435#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -513,7 +373,7 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#248#2609#0" expanded="false" />
-            <element signature="e#2651#4558#0" expanded="false" />
+            <element signature="e#2651#4636#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -567,19 +427,27 @@
           <folding>
             <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#1;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#4;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#4;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#12497#13018#0" expanded="false" />
-            <element signature="e#13154#19948#0" expanded="false" />
-            <element signature="e#13332#14746#0" expanded="false" />
-            <element signature="e#15021#15941#0" expanded="false" />
-            <element signature="e#16219#17632#0" expanded="false" />
-            <element signature="e#17913#19768#0" expanded="false" />
-            <element signature="e#20014#27110#0" expanded="false" />
-            <element signature="e#20125#22799#0" expanded="false" />
-            <element signature="e#23089#24195#0" expanded="false" />
-            <element signature="e#24473#25551#0" expanded="false" />
-            <element signature="e#25828#26929#0" expanded="false" />
-            <element signature="e#27486#28088#0" expanded="false" />
+            <element signature="e#14376#14897#0" expanded="false" />
+            <element signature="e#15033#21827#0" expanded="false" />
+            <element signature="e#15211#16625#0" expanded="false" />
+            <element signature="e#16900#17820#0" expanded="false" />
+            <element signature="e#18098#19511#0" expanded="false" />
+            <element signature="e#19792#21647#0" expanded="false" />
+            <element signature="e#21893#28989#0" expanded="false" />
+            <element signature="e#22004#24678#0" expanded="false" />
+            <element signature="e#24968#26074#0" expanded="false" />
+            <element signature="e#26352#27430#0" expanded="false" />
+            <element signature="e#27707#28808#0" expanded="false" />
+            <element signature="e#29056#30094#0" expanded="false" />
+            <element signature="e#29311#29913#0" expanded="false" />
+            <element signature="e#30159#31658#0" expanded="false" />
+            <element signature="e#31724#34488#0" expanded="false" />
+            <element signature="e#34554#34841#0" expanded="false" />
+            <element signature="e#35021#36435#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -591,7 +459,7 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#248#2609#0" expanded="false" />
-            <element signature="e#2651#4558#0" expanded="false" />
+            <element signature="e#2651#4636#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -645,19 +513,27 @@
           <folding>
             <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#1;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#4;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#4;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#12497#13018#0" expanded="false" />
-            <element signature="e#13154#19948#0" expanded="false" />
-            <element signature="e#13332#14746#0" expanded="false" />
-            <element signature="e#15021#15941#0" expanded="false" />
-            <element signature="e#16219#17632#0" expanded="false" />
-            <element signature="e#17913#19768#0" expanded="false" />
-            <element signature="e#20014#27110#0" expanded="false" />
-            <element signature="e#20125#22799#0" expanded="false" />
-            <element signature="e#23089#24195#0" expanded="false" />
-            <element signature="e#24473#25551#0" expanded="false" />
-            <element signature="e#25828#26929#0" expanded="false" />
-            <element signature="e#27486#28088#0" expanded="false" />
+            <element signature="e#14376#14897#0" expanded="false" />
+            <element signature="e#15033#21827#0" expanded="false" />
+            <element signature="e#15211#16625#0" expanded="false" />
+            <element signature="e#16900#17820#0" expanded="false" />
+            <element signature="e#18098#19511#0" expanded="false" />
+            <element signature="e#19792#21647#0" expanded="false" />
+            <element signature="e#21893#28989#0" expanded="false" />
+            <element signature="e#22004#24678#0" expanded="false" />
+            <element signature="e#24968#26074#0" expanded="false" />
+            <element signature="e#26352#27430#0" expanded="false" />
+            <element signature="e#27707#28808#0" expanded="false" />
+            <element signature="e#29056#30094#0" expanded="false" />
+            <element signature="e#29311#29913#0" expanded="false" />
+            <element signature="e#30159#31658#0" expanded="false" />
+            <element signature="e#31724#34488#0" expanded="false" />
+            <element signature="e#34554#34841#0" expanded="false" />
+            <element signature="e#35021#36435#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -802,13 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/js/constant/jimiHost.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/js/controller/controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07366072">
@@ -831,22 +700,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/json/list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/productList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.793104">
-          <caret line="121" column="33" selection-start-line="121" selection-start-column="33" selection-end-line="121" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/js/viewModel/radarList/radarList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -865,10 +718,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/index.html">
+    <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/js/tool/d3.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2758621">
-          <caret line="100" column="32" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/json/list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/productList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.965517">
+          <caret line="112" column="30" selection-start-line="112" selection-start-column="30" selection-end-line="112" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/js/viewModel/composition/spa-alternateTab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/js/constant/jimiHost.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="44" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/js/viewModel/composition/spa-middleComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2702702">
+          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -876,36 +769,51 @@
     <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/js/echarts/jimiEcharts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+          <caret line="107" column="41" selection-start-line="107" selection-start-column="41" selection-end-line="107" selection-end-column="41" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#248#2609#0" expanded="false" />
-            <element signature="e#2651#4558#0" expanded="false" />
+            <element signature="e#6699#8448#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/productDetail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43184713">
-          <caret line="330" column="22" selection-start-line="330" selection-start-column="22" selection-end-line="330" selection-end-column="22" />
+        <state vertical-scroll-proportion="-21.862068">
+          <caret line="163" column="28" selection-start-line="163" selection-start-column="28" selection-end-line="163" selection-end-column="28" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#1;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#4;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#4;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#12497#13018#0" expanded="false" />
-            <element signature="e#13154#19948#0" expanded="false" />
-            <element signature="e#13332#14746#0" expanded="false" />
-            <element signature="e#15021#15941#0" expanded="false" />
-            <element signature="e#16219#17632#0" expanded="false" />
-            <element signature="e#17913#19768#0" expanded="false" />
-            <element signature="e#20014#27110#0" expanded="false" />
-            <element signature="e#20125#22799#0" expanded="false" />
-            <element signature="e#23089#24195#0" expanded="false" />
-            <element signature="e#24473#25551#0" expanded="false" />
-            <element signature="e#25828#26929#0" expanded="false" />
-            <element signature="e#27486#28088#0" expanded="false" />
+            <element signature="e#14376#14897#0" expanded="false" />
+            <element signature="e#15033#21827#0" expanded="false" />
+            <element signature="e#15211#16625#0" expanded="false" />
+            <element signature="e#16900#17820#0" expanded="false" />
+            <element signature="e#18098#19511#0" expanded="false" />
+            <element signature="e#19792#21647#0" expanded="false" />
+            <element signature="e#21893#28989#0" expanded="false" />
+            <element signature="e#22004#24678#0" expanded="false" />
+            <element signature="e#24968#26074#0" expanded="false" />
+            <element signature="e#26352#27430#0" expanded="false" />
+            <element signature="e#27707#28808#0" expanded="false" />
+            <element signature="e#29056#30094#0" expanded="false" />
+            <element signature="e#29311#29913#0" expanded="false" />
+            <element signature="e#30159#31658#0" expanded="false" />
+            <element signature="e#31724#34488#0" expanded="false" />
+            <element signature="e#34554#34841#0" expanded="false" />
+            <element signature="e#35021#36435#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JIMI-RADAR 12-6/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.7566879">
+          <caret line="216" column="14" selection-start-line="216" selection-start-column="14" selection-end-line="216" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>

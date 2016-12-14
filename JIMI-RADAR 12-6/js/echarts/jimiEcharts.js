@@ -91,12 +91,12 @@
             titleText = json.titleText || '关键词提及指数';
 
 
-        option = {
+        var option = {
             //title: {
             //    text: titleText,
             //},
             backgroundColor: '#f3f3f3',
-            color: ['#333', '#666', '#999',],
+            color: ['#333', '#666', '#999', '#333', '#666', '#999',],
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {            // 坐标轴指示器，坐标轴触发有效
@@ -124,6 +124,7 @@
                     type: 'value'
                 }
             ],
+            animationEasing: 'exponentialInOut',
             series: [
                 {
                     name: '天猫',
@@ -143,6 +144,73 @@
                     barCategoryGap: '30%',
                     data: [220, 182, 191, 234, 290, 330, 310]
                 },
+
+            ]
+        };
+        var myChart = echarts.init(document.getElementById(domId));
+        myChart.setOption(option);
+    };
+    JME.drawVideoLine = function (json) {
+        var domId = json.domId,
+            dataJson = json.dataJson,
+            imgUrl = json.imgUrl,
+            titleText = json.titleText || '关键词提及指数';
+
+
+        var option = {
+            //title: {
+            //    text: titleText,
+            //},
+            backgroundColor: '#f3f3f3',
+            color: ['#333', '#666', '#999', '#333', '#666', '#999',],
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            legend: {
+                show: true,
+                data: ['天猫', '京东', '1号店']
+            },
+            grid: {
+                left: '2%',
+                right: '2%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['12-8', '12-9', '12-10', '12-11', '12-12', '12-13', '12-14']
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value'
+                }
+            ],
+            animationEasing: 'exponentialInOut',
+            series: [
+                {
+                    name: '天猫',
+                    type: 'bar',
+                    barCategoryGap: '30%',
+                    data: [320, 332, 301, 334, 390, 330, 320]
+                },
+                {
+                    name: '京东',
+                    type: 'bar',
+                    barCategoryGap: '30%',
+                    data: [120, 132, 101, 134, 90, 230, 210]
+                },
+                {
+                    name: '1号店',
+                    type: 'bar',
+                    barCategoryGap: '30%',
+                    data: [220, 182, 191, 234, 290, 330, 310]
+                },
+
             ]
         };
         var myChart = echarts.init(document.getElementById(domId));
@@ -180,6 +248,7 @@
                 left: 'left',
                 data: legendData
             },
+            animationEasing: 'exponentialInOut',
             series: [
                 {
                     name: seriesName,

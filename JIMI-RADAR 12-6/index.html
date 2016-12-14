@@ -7,12 +7,30 @@
     <title>JIMI雷达</title>
     <link rel="stylesheet" href="css/main.css"/>
     <style type="text/css">
-        html, body {
-            background: url("img/index/background.png") no-repeat;
-            background-size: cover;
+        html {
             width: 100%;
             height: 100%;
         }
+
+        body {
+            background: #222;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /*svg*********************************************************/
+        rect {
+            fill: none;
+            pointer-events: all;
+        }
+
+        circle {
+            fill: none;
+            stroke-width: 2.5px;
+        }
+
+        /*svg*********************************************************/
 
         .middleCon {
             width: 386px;
@@ -39,6 +57,7 @@
             border-radius: 5px;
             box-sizing: border-box;
             height: 50px;
+            transition: all 0.2s ease 0s;
         }
 
         .middleInput input {
@@ -104,7 +123,6 @@
     </style>
 </head>
 <body>
-
 <div class="middleCon">
     <div class="middlelogo"><img src="img/index/logo.png" width="55%"></div>
     <div class="middleInput" id='account'><input maxlength="30" type="text" placeholder="请输入账号"/></div>
@@ -119,16 +137,113 @@
 
 <script src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js"></script>
 <!--<script src='js/tool/response.js'></script>-->
-<script src='js/tool/fastclick.js'></script>
+<!--<script src='js/tool/fastclick.js'></script>-->
+<script src="js/tool/d3.min.js"></script>
 <script src="js/searchToJson/searchToJson.js"></script>
 <script src="js/globalManager/globalManager.js"></script>
 <script src='js/constant/jimiHost.js'></script>
 <script src='js/controller/controller.js'></script>
 <script>
     $(function () {
-        $('.login').click(function () {
-            location.href='productList.html';
+
+
+        //chrome
+        document.addEventListener('webkitvisibilitychange', function () {
+//            console.log(document.webkitVisibilityState);
+            if (document.webkitVisibilityState == 'hidden') {
+                Stop();
+            }
+            else {
+                Run();
+            }
+        });
+
+        //init............................................
+        $('.middleInput').stop().animate({opacity: 0.4});
+
+        //bindEvent.............................................
+        $('.middleInput input').focus(function () {
+            $(this).parent().css({'box-shadow': '3px 3px 8px rgba(160, 160, 160, 0.31)'});
+            $(this).parent()
+                    .stop().animate({opacity: 1})
+                    .siblings('.middleInput').stop().animate({opacity: 0.4});
+        }).blur(function () {
+            $(this).parent().css({'box-shadow': 'none'});
         })
+
+        $('.login').click(function () {
+            location.href = 'productList.html';
+        })
+
+
+        //svg...........................................................
+        var width = Math.max(960, innerWidth), height = Math.max(500, innerHeight);
+
+        //用来循环色相环
+        var sexiang = 0;
+
+        var svg = d3.select("body").append("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+        svg.append("rect")
+                .attr("width", width)
+                .attr("height", height)
+//            .on("ontouchstart" in document ? "touchmove" : "mousemove", particle);
+                .on("click", particle);
+
+        function particle() {
+//        d3.mouse(矩形对象) 得到鼠标对象
+            var m = d3.mouse(this);
+
+            svg.insert("circle", "rect")
+                    .attr("cx", m[0])
+                    .attr("cy", m[1])
+                    .attr("r", 1e-6)
+                    .style("stroke", d3.hsl((sexiang = (sexiang + 5) % 360), 0.3, .5))
+                    .style("stroke-opacity", 1)
+                    .transition()
+                    .duration(2000)
+                    .ease(Math.sqrt)
+                    .attr("r", 200)
+                    .style("stroke-opacity", 1e-6)
+                    .remove();
+
+            d3.event.preventDefault();
+        }
+
+
+        var timer = null;
+        Run();
+        function Run() {
+            timer = setInterval(function () {
+                var h = Math.random() * 360;
+                var width = Math.random() * innerWidth;
+                var height = Math.random() * innerHeight;
+                for (i = 0; i < 8; i++) {
+                    setTimeout(function () {
+                        svg.insert("circle", "rect")
+                                .attr("cx", width)
+                                .attr("cy", height)
+                                .attr("r", 1e-6)
+                                .style("stroke", d3.hsl(h, 0.3, .5))
+                                .style("stroke-opacity", 1)
+                                .transition()
+                                .duration(2000)
+                                .ease(Math.sqrt)
+                                .attr("r", 200)
+                                .style("stroke-opacity", 1e-6)
+                                .remove();
+                    }, i * 60)
+                }
+            }, 1600)
+        }
+
+        function Stop() {
+            clearInterval(timer);
+            delete timer;
+        }
+
     })
 </script>
 </body>

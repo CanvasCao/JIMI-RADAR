@@ -29,6 +29,12 @@
 
         }
 
+        .proParameterCon, .proDetail {
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, .14);
+            box-shadow: 0 3px 8px -6px rgba(0, 0, 0, .1);
+        }
+
         /*************************************************************************************/
         .reportTitle {
             box-sizing: border-box;
@@ -60,7 +66,7 @@
             background: white;
             padding: 15px 0px;
             box-sizing: border-box;
-            margin-bottom: 1px;
+            margin-bottom: 10px;
         }
 
         .proImg {
@@ -141,6 +147,7 @@
         /*************************************************************************************/
         .proDetail {
             background: white;
+            margin-bottom: 50px;
         }
 
         .proDetailMenu {
@@ -150,7 +157,11 @@
             box-sizing: border-box;
             background: #373b40;
             color: white;
-            margin-right: 30px;
+            margin-top: 15px;
+            margin-left: 15px;
+            margin-right: 15px;
+            border-radius: 8px;
+            border-bottom: 1px solid #373b40;
         }
 
         .proDetailMenu li {
@@ -160,21 +171,21 @@
             cursor: pointer;
             font-size: 16px;
             position: relative;
+            border-radius: 8px;
         }
 
         .proDetailMenuCur {
-            border-top: 2px solid #4b5157;
-            border-bottom: 5px solid #2b2e32;
+            border-bottom: 4px solid #2b2e32;
         }
 
         .proDetailMenuCur::after {
             content: "";
             position: absolute;
-            right: -10px;
-            top: 0;
-            border-top: 30px solid transparent;
-            border-bottom: 20px solid transparent;
-            border-left: 10px solid #373b40;
+            right: -11px;
+            top: 1px;
+            border-top: 32px solid transparent;
+            border-bottom: 19px solid transparent;
+            border-left: 13px solid #373b40;
         }
 
         .proDetailContent {
@@ -183,7 +194,7 @@
             width: 790px;
             /*border: 1px solid #000;*/
             box-sizing: border-box;
-            padding: 0 0px 30px 20px;
+            padding: 0 30px 30px 30px;
         }
 
         .proDetailContent > div {
@@ -194,7 +205,16 @@
         /*canvas*/
         .canvasObj {
             margin-bottom: 50px;
-            margin-left: 50px;
+            /*margin-left: 50px;*/
+            width: 600px;
+
+        }
+
+        .canvasCon {
+            width: 600px;
+            height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
         }
 
         .canvasDesc {
@@ -204,25 +224,21 @@
             padding: 15px 0;
         }
 
-        .canvasCon {
-            width: 600px;
-            height: 400px;
-
-        }
-
         .canvasObjHalf {
             margin-bottom: 50px;
             display: inline-block;
-            width: 47%;
-            margin-right: 2%;
+            width: 330px;
+            margin-right: 3%;
         }
 
         .canvasConHalf {
-            width: 350px;
+            width: 330px;
             height: 300px;
+            border-radius: 8px;
+            overflow: hidden;
         }
 
-        .canvasCon, .canvasConHalf {
+        .canvasCon, .canvasConHalf, .spa {
             box-shadow: 4px 10px 15px #d9e0e7;
             -webkit-transition: all 0.2s ease 0s;
             -moz-transition: all 0.2s ease 0s;
@@ -230,7 +246,7 @@
             transition: all 0.2s ease 0s;
         }
 
-        .canvasCon:hover, .canvasConHalf:hover {
+        .canvasCon:hover, .canvasConHalf:hover, .spa:hover {
             box-shadow: 2px 4px 12px #d9e0e7;
         }
 
@@ -354,10 +370,35 @@
             </div>
             <div class='proDetailLi'>
                 <div class='canvasDesc'>▎成分列表</div>
-                <iframe width="720" height="1000" src="http://n1.jimi.la/apps_T1/CompositionDistribution/CompositionDistribution.html"></iframe>
+                <div class='spa' style='margin: 50px 0 150px;'>
+                    <div id="compHeader" style='display: none'></div>
+                    <div id="compAltTab"></div>
+                    <div id="compList"></div>
+                    <div id="compMiddle" style="box-sizing: border-box;padding: 0 10px"></div>
+                </div>
             </div>
-            <div class='proDetailLi'>营销曝光</div>
-            <div class='proDetailLi'>影响力</div>
+            <div class='proDetailLi'>
+                <div class='canvasObj'>
+                    <div class='canvasDesc'>▎相关视频数量</div>
+                    <div class='canvasCon' id="canvasVideoNum"></div>
+                </div>
+                <div class='canvasObj'>
+                    <div class='canvasDesc'>▎最大播放次数</div>
+                    <div class='canvasCon' id="canvasVideoPlay"></div>
+                </div>
+                <div class='canvasObj'>
+                    <div class='canvasDesc'>▎相关视频</div>
+                    <div>暂无</div>
+                </div>
+                <div class='canvasObj'>
+                    <div class='canvasDesc'>▎热门事件</div>
+                    <div>暂无</div>
+                </div>
+            </div>
+            <div class='proDetailLi'>  <div class='canvasObj'>
+                <div class='canvasDesc'>▎外形 (包装)</div>
+                <div class='canvasCon' id="canvasOutlook2"></div>
+            </div></div>
         </div>
         <div style="clear: both;"></div>
     </div>
@@ -379,6 +420,12 @@
 <script src='js/echarts/echarts.min.js'></script>
 <script src='js/echarts/wordCloud.js'></script>
 <script src='js/echarts/jimiEcharts.js'></script>
+
+
+<script src='js/viewModel/composition/spa-alternateTab.js'></script>
+<script src='js/viewModel/composition/spa-compositionHeader.js'></script>
+<script src='js/viewModel/composition/spa-middleComponent.js'></script>
+<script src='js/viewModel/composition/spa-compositionList.js'></script>
 <script>
     $(function () {
         //jQueryDom.........................................
@@ -835,7 +882,6 @@
                 JME.drawPriceLine({
                     domId: 'canvasPrice',
                     dataJson: {},
-                    imgUrl: "img/echarts/circle.png",
                 });
 
                 JME.drawWordCloud({
@@ -910,21 +956,133 @@
             },
             //4核心成分....................
             function () {
+                $.ajax({
+                    type: "post",
+                    url: jimiHost + '/formual_safe.php',
+                    data: {
+                        pid: '56829ef1efb80c4e26c438de'
+                    },
+                    dataType: "jsonp",
+                    jsonp: "callback",
+                    jsonpCallback: "jsonpcallback",
+                    success: function (data) {
+//                        console.log(JSON.stringify(data));
+                        //var compositionHeader = new CompositionHeader('#compHeader', data);
+                        var alternateTab = new AlternateTab('#compAltTab', {txtArray: ['按类型', '按安全']});
+                        var compositionList = new CompositionList('#compList',
+                                {
+                                    color: '#555',
+                                    listArray: [
+                                        [
+                                            {color: '#fba41a', txt: '功效型成分'},
+                                            {color: '#555', txt: '剂型需求'},
+                                            {color: '#3982e1', txt: '保湿型成分'},
+                                            {color: '#23ad39', txt: '防晒型成分'},
+                                        ],
+                                        [
+                                            {color: '#e5004f', txt: '慎用成分'},
+                                            {color: '#555', txt: '剂型需求'},
+                                        ]
+                                    ],
+                                });
+
+                        var middleComponent = new MiddleComponent('#compMiddle', data);
+//                        var alertCon = new AlertCon('.alertCon', data);
+
+                        //控件与控件的关联 点击按钮 类型和成分的切换 控件的事件只能写在所有元素加载完成
+                        var $spa = $('.spa');
+
+                        $spa.find('#compAltTab .alterDiv').click(function () {
+                            var index = $(this).index();
+                            $ele1 = $('#compList .listCon').eq(index);
+                            $ele2 = $('#compMiddle>div').eq(index);
+                            $ele1.siblings().stop().fadeOut(100, 'swing', function () {
+                                $ele1.stop().fadeIn(100);
+                            });
+                            $ele2.siblings().stop().fadeOut(100, 'swing', function () {
+                                $ele2.stop().fadeIn(100);
+                            });
+
+                        })
+                    }
+                    ,
+                    error: function (err) {
+                        console.log('ERROR!');
+                        console.log(err);
+                    }
+                })
+                ;
 
             },
             //5营销曝光....................
             function () {
+                JME.drawPriceLine({
+                    domId: 'canvasVideoNum',
+                    dataJson: {},
+                });
 
+                JME.drawPriceLine({
+                    domId: 'canvasVideoPlay',
+                    dataJson: {},
+                });
             },
             //6影响力......................
             function () {
-
+                JME.drawWordCloud({
+                    domId: 'canvasOutlook2',
+                    dataJson: {
+                        "专柜": 75,
+                        "不好看": 1,
+                        "高端大气": 7,
+                        "标志": 55,
+                        "简陋": 2,
+                        "粉扑": 1,
+                        "旅行装": 1,
+                        "滴管": 150,
+                        "气垫": 6,
+                        "logo": 7,
+                        "一罐": 1,
+                        "好看": 8,
+                        "镜子": 11,
+                        "吸铁石": 1,
+                        "圆形": 5,
+                        "精致": 81,
+                        "塑料": 14,
+                        "难看": 3,
+                        "限量版": 5,
+                        "按钮": 3,
+                        "经典": 101,
+                        "携带方便": 3,
+                        "双管": 1,
+                        "磁铁": 3,
+                        "明星": 160,
+                        "优雅": 32,
+                        "小巧": 19,
+                        "一瓶": 275,
+                        "有质感": 4,
+                        "畅销": 11,
+                        "金属": 10,
+                        "一小瓶": 4,
+                        "人气": 2,
+                        "高大上": 34,
+                        "单独包装": 1,
+                        "玻璃": 18,
+                        "奢华": 14,
+                        "可爱": 25,
+                        "高档": 20,
+                        "很好看": 2,
+                        "简单": 63
+                    },
+                    imgUrl: "img/echarts/circle.png",
+                    titleText: null,
+                    rgblist: getRGBlist.getRGBlist(),
+                })
             },
         ];
 
 
         //init.............................................. 模拟第一次点击
-        $('.proDetailMenu li').eq(4).trigger("click");
+        $('.proDetailMenu li').eq(3).trigger("click");
     })
 </script>
 <script>
