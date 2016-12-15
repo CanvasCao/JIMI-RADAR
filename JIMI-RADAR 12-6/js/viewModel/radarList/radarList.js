@@ -36,7 +36,7 @@
                 var endTime = e.statEndTime.split('/');
 
                 str += "<div class='listSec' data-pid=" + e.pid + " >" +
-                    "<div class='proImg'><img src='" + e.imgUrl + "' height='200'></div>" +
+                    "<div class='proImg'><img src='" + e.imgUrl + "'></div>" +
                     "<div class='pname'>" + e.pname + "</div>" +
 
                     "<span class=tri>报告生成时间：</span>" +

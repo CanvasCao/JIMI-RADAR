@@ -55,7 +55,7 @@
             });
 
             $(this.C).find('.headerLogo').click(function () {
-                location.href = 'productList.html';
+                location.href = 'index.html';
             })
 
 

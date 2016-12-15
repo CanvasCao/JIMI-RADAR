@@ -9,20 +9,32 @@
 ;
 (function (w, d, $, undefined) {
     var JME = {};
+
+    var rgbListIndex = 0;
+    var listArr = [
+        {r: 100,},
+        {g: 100,},
+        {b: 100,},
+        {r: 100, g: 100},
+        {r: 100, b: 100},
+        {g: 100, b: 100},
+    ];
+
+    function getRGBlist() {
+        var answer = listArr[rgbListIndex];
+        rgbListIndex = ((rgbListIndex + 1) == listArr.length) ? 0 : (rgbListIndex + 1);
+        return answer;
+    };
+
     JME.drawWordCloud = function (json) {
         var domId = json.domId,
             dataJson = json.dataJson,
             imgUrl = json.imgUrl,
             titleText = json.titleText || '关键词提及指数',
-            rgblist = json.rgblist || {
-                    r: 0,
-                    g: 0,
-                    b: 0,
-                },
+            rgblist = getRGBlist(),
             rValue = rgblist.r || 0,
             gValue = rgblist.g || 0,
             bValue = rgblist.b || 0;
-
 
         var data = [];
         for (k in dataJson) {
@@ -53,7 +65,7 @@
             tooltip: {},
             series: [{
                 type: 'wordCloud',
-                sizeRange: [15, 100],
+                sizeRange: [18, 100],
                 rotationRange: [0, 0],
                 rotationStep: 0,
                 gridSize: 10,
@@ -130,19 +142,21 @@
                     name: '天猫',
                     type: 'bar',
                     barCategoryGap: '30%',
-                    data: [320, 332, 301, 334, 390, 330, 320]
+                    data: [760, 760, 760, 760, 760, 760, 760,]
                 },
                 {
                     name: '京东',
                     type: 'bar',
                     barCategoryGap: '30%',
-                    data: [120, 132, 101, 134, 90, 230, 210]
+                    data: [760, 760, 760, 760, 760, 760, 760,]
+
                 },
                 {
                     name: '1号店',
                     type: 'bar',
                     barCategoryGap: '30%',
-                    data: [220, 182, 191, 234, 290, 330, 310]
+                    data: [760, 760, 760, 760, 760, 760, 760,]
+
                 },
 
             ]
@@ -156,13 +170,27 @@
             imgUrl = json.imgUrl,
             titleText = json.titleText || '关键词提及指数';
 
+        var legendArr = [];
+        var seriesArr = [];
+        for (k in dataJson) {
+            legendArr.push(k);
+            seriesArr.push(
+                {
+                    name: k,
+                    type: 'bar',
+                    barCategoryGap: '30%',
+                    data: [dataJson[k]],
+                }
+            );
+        }
+        ;
+
 
         var option = {
             //title: {
             //    text: titleText,
             //},
             backgroundColor: '#f3f3f3',
-            color: ['#333', '#666', '#999', '#333', '#666', '#999',],
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {            // 坐标轴指示器，坐标轴触发有效
@@ -171,7 +199,7 @@
             },
             legend: {
                 show: true,
-                data: ['天猫', '京东', '1号店']
+                data: legendArr,
             },
             grid: {
                 left: '2%',
@@ -182,7 +210,7 @@
             xAxis: [
                 {
                     type: 'category',
-                    data: ['12-8', '12-9', '12-10', '12-11', '12-12', '12-13', '12-14']
+                    data: []
                 }
             ],
             yAxis: [
@@ -191,27 +219,7 @@
                 }
             ],
             animationEasing: 'exponentialInOut',
-            series: [
-                {
-                    name: '天猫',
-                    type: 'bar',
-                    barCategoryGap: '30%',
-                    data: [320, 332, 301, 334, 390, 330, 320]
-                },
-                {
-                    name: '京东',
-                    type: 'bar',
-                    barCategoryGap: '30%',
-                    data: [120, 132, 101, 134, 90, 230, 210]
-                },
-                {
-                    name: '1号店',
-                    type: 'bar',
-                    barCategoryGap: '30%',
-                    data: [220, 182, 191, 234, 290, 330, 310]
-                },
-
-            ]
+            series: seriesArr,
         };
         var myChart = echarts.init(document.getElementById(domId));
         myChart.setOption(option);

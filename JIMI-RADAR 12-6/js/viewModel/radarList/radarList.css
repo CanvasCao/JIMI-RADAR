@@ -1,7 +1,7 @@
 
 .listSec {
     width: 210px;
-    padding: 15px 15px 20px 15px;
+    padding: 10px 15px 15px 15px;
     float: left;
     background: #fff;
     cursor: pointer;
@@ -9,7 +9,7 @@
     -moz-transition: all 0.4s;
     -ms-transition: all 0.4s;
     transition: all 0.4s;
-    height: 450px;
+    height: 400px;
     margin: 0px 15px 15px 0;
 }
 
@@ -19,6 +19,10 @@
 
 .proImg {
     text-align: center;
+}
+
+.proImg img {
+    height: 160px;
 }
 
 .pname {

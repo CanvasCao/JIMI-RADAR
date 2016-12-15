@@ -200,7 +200,7 @@
                     .attr("cx", m[0])
                     .attr("cy", m[1])
                     .attr("r", 1e-6)
-                    .style("stroke", d3.hsl((sexiang = (sexiang + 5) % 360), 0.3, .5))
+                    .style("stroke", d3.hsl((sexiang = (sexiang + 5) % 360), 0.3, .3))
                     .style("stroke-opacity", 1)
                     .transition()
                     .duration(2000)
@@ -218,15 +218,18 @@
         function Run() {
             timer = setInterval(function () {
                 var h = Math.random() * 360;
+                h = 220;
                 var width = Math.random() * innerWidth;
                 var height = Math.random() * innerHeight;
+                var light = Math.random() / 3+0.1;
+                console.log(light);
                 for (i = 0; i < 8; i++) {
                     setTimeout(function () {
                         svg.insert("circle", "rect")
                                 .attr("cx", width)
                                 .attr("cy", height)
                                 .attr("r", 1e-6)
-                                .style("stroke", d3.hsl(h, 0.3, .5))
+                                .style("stroke", d3.hsl(h, 0.3, light))
                                 .style("stroke-opacity", 1)
                                 .transition()
                                 .duration(2000)
@@ -236,7 +239,7 @@
                                 .remove();
                     }, i * 60)
                 }
-            }, 1600)
+            }, 500)
         }
 
         function Stop() {
