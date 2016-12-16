@@ -1,0 +1,78 @@
+/*ontainer***************************************/
+.proDetailContent {
+    float: left;
+    /*1024-180*/
+    width: 790px;
+    /*border: 1px solid #000;*/
+    box-sizing: border-box;
+    padding: 0 30px 30px 30px;
+}
+
+.proDetailContent > div {
+    display: none;
+}
+
+/*canvas**************************************/
+.canvasObj {
+    margin-bottom: 50px;
+    /*margin-left: 50px;*/
+    /*width: 600px;*/
+}
+
+.canvasCon {
+    width: 600px;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.canvasDesc {
+    font-size: 18px;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding: 15px 0;
+}
+
+.canvasObjHalf {
+    margin-bottom: 50px;
+    display: inline-block;
+    width: 330px;
+    margin-right: 4%;
+}
+
+.canvasConHalf {
+    width: 330px;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.canvasCon, .canvasConHalf, .spa {
+    box-shadow: 4px 10px 15px #d9e0e7;
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -ms-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+}
+
+.canvasCon:hover, .canvasConHalf:hover, .spa:hover {
+    box-shadow: 2px 4px 12px #d9e0e7;
+}
+
+/*成分container****************************/
+.spa {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/*视频dom***********************************/
+.relatedVideoSec {
+    display: inline-block;
+    width: 198px;
+    margin: 0 12px 12px 0;
+}
+
+.relatedVideoSec iframe {
+    width: 198px;
+    height: 132px;
+}

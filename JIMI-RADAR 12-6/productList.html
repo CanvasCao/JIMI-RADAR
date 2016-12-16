@@ -87,41 +87,46 @@
 <div class='footer'></div>
 
 <script src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src='js/tool/fastclick.js'></script>
-<script src="js/searchToJson/searchToJson.js"></script>
-<script src="js/globalManager/globalManager.js"></script>
-<script src='js/constant/jimiHost.js'></script>
-<script src='js/controller/controller.js'></script>
+<script src="js/require/require.min.js"></script>
+<script src="js/require/requireConfig.js"></script>
 
 <link rel="stylesheet" href="js/viewModel/radarHeader/radarHeader.css"/>
-<script src='js/viewModel/radarHeader/radarHeader.js'></script>
 <link rel="stylesheet" href="js/viewModel/radarList/radarList.css"/>
-<script src='js/viewModel/radarList/radarList.js'></script>
-<script src='js/viewModel/radarFooter/radarFooter.js'></script>
-<script src='js/viewModel/pageClickBar/pageClickBar.js'></script>
 <script>
     $(function () {
-        var radarHeader = new RadarHeader('.header');
-        var radarFooter = new RadarFooter('.footer');
-        var pageClickBar = new PageClickBar('.pageClickBar', {pageNum: 99});
+        requirejs([
+            'searchToJson',
+            'globalManager',
+            'jimiHost',
+            'controller',
 
-        $.ajax({
-            type: "get",
-            url: 'json/list.js',
+            'vmRadarHeader',
+            'vmRadarFooter',
+            'vmPageClickBar',
+            'vmRadarList',
+        ], function () {
+            var radarHeader = new RadarHeader('.header');
+            var radarFooter = new RadarFooter('.footer');
+            var pageClickBar = new PageClickBar('.pageClickBar', {pageNum: 99});
+            $.ajax({
+                type: "get",
+                url: 'json/list.js',
 //            data: params,
-            dataType: "jsonp",
-            jsonp: "callback",
-            jsonpCallback: "jsonpcallback",
-            success: function (data) {
-                console.log(JSON.stringify(data));
-                var pro=data.data[0];
-                var radarList = new RadarList('.list', {data:[pro,pro,pro,pro,pro]});
-            },
-            error: function (err) {
-                console.log('ERROR!');
-                console.log(err);
-            }
-        });
+                dataType: "jsonp",
+                jsonp: "callback",
+                jsonpCallback: "jsonpcallback",
+                success: function (data) {
+                    console.log(JSON.stringify(data));
+                    var pro = data.data[0];
+                    var radarList = new RadarList('.list', {data: [pro, pro, pro, pro, pro]});
+                },
+                error: function (err) {
+                    console.log('ERROR!');
+                    console.log(err);
+                }
+            });
+        })
+
     })
 </script>
 </body>

@@ -136,100 +136,73 @@
 
 
 <script src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js"></script>
-<!--<script src='js/tool/response.js'></script>-->
-<!--<script src='js/tool/fastclick.js'></script>-->
-<script src="js/tool/d3.min.js"></script>
-<script src="js/searchToJson/searchToJson.js"></script>
-<script src="js/globalManager/globalManager.js"></script>
-<script src='js/constant/jimiHost.js'></script>
-<script src='js/controller/controller.js'></script>
+<script src="js/require/require.min.js"></script>
+<script src="js/require/requireConfig.js"></script>
 <script>
     $(function () {
+        requirejs(['d3',
+                    'searchToJson',
+                    'globalManager',
+                    'jimiHost',
+                    'controller',
+                    'contentInitObj'
+                ],
+                function (d3) {
 
-
-        //chrome
-        document.addEventListener('webkitvisibilitychange', function () {
+                    //chrome.......................................................
+                    document.addEventListener('webkitvisibilitychange', function () {
 //            console.log(document.webkitVisibilityState);
-            if (document.webkitVisibilityState == 'hidden') {
-                Stop();
-            }
-            else {
-                Run();
-            }
-        });
+                        if (document.webkitVisibilityState == 'hidden') {
+                            Stop();
+                        }
+                        else {
+                            Run();
+                        }
+                    });
 
-        //init............................................
-        $('.middleInput').stop().animate({opacity: 0.4});
+                    //init............................................
+                    $('.middleInput').stop().animate({opacity: 0.4});
 
-        //bindEvent.............................................
-        $('.middleInput input').focus(function () {
-            $(this).parent().css({'box-shadow': '3px 3px 8px rgba(160, 160, 160, 0.31)'});
-            $(this).parent()
-                    .stop().animate({opacity: 1})
-                    .siblings('.middleInput').stop().animate({opacity: 0.4});
-        }).blur(function () {
-            $(this).parent().css({'box-shadow': 'none'});
-        })
+                    //bindEvent.............................................
+                    $('.middleInput input').focus(function () {
+                        $(this).parent().css({'box-shadow': '3px 3px 8px rgba(160, 160, 160, 0.31)'});
+                        $(this).parent()
+                                .stop().animate({opacity: 1})
+                                .siblings('.middleInput').stop().animate({opacity: 0.4});
+                    }).blur(function () {
+                        $(this).parent().css({'box-shadow': 'none'});
+                    })
 
-        $('.login').click(function () {
-            location.href = 'productList.html';
-        })
+                    $('.login').click(function () {
+                        location.href = 'productList.html';
+                    })
 
 
-        //svg...........................................................
-        var width = Math.max(960, innerWidth), height = Math.max(500, innerHeight);
+                    //svg...........................................................
+                    var width = Math.max(960, innerWidth), height = Math.max(500, innerHeight);
 
-        //用来循环色相环
-        var sexiang = 0;
+                    //用来循环色相环
+                    var sexiang = 0;
 
-        var svg = d3.select("body").append("svg")
-                .attr("width", width)
-                .attr("height", height);
+                    var svg = d3.select("body").append("svg")
+                            .attr("width", width)
+                            .attr("height", height);
 
-        svg.append("rect")
-                .attr("width", width)
-                .attr("height", height)
+                    svg.append("rect")
+                            .attr("width", width)
+                            .attr("height", height)
 //            .on("ontouchstart" in document ? "touchmove" : "mousemove", particle);
-                .on("click", particle);
+                            .on("click", particle);
 
-        function particle() {
+                    function particle() {
 //        d3.mouse(矩形对象) 得到鼠标对象
-            var m = d3.mouse(this);
+                        var m = d3.mouse(this);
 
-            svg.insert("circle", "rect")
-                    .attr("cx", m[0])
-                    .attr("cy", m[1])
-                    .attr("r", 1e-6)
-                    .style("stroke", d3.hsl((sexiang = (sexiang + 5) % 360), 0.3, .3))
-                    .style("stroke-opacity", 1)
-                    .transition()
-                    .duration(2000)
-                    .ease(Math.sqrt)
-                    .attr("r", 200)
-                    .style("stroke-opacity", 1e-6)
-                    .remove();
-
-            d3.event.preventDefault();
-        }
-
-
-        var timer = null;
-        Run();
-        function Run() {
-            timer = setInterval(function () {
-                var h = Math.random() * 360;
-                h = 220;
-                var width = Math.random() * innerWidth;
-                var height = Math.random() * innerHeight;
-                var light = Math.random() / 3+0.1;
-                console.log(light);
-                for (i = 0; i < 8; i++) {
-                    setTimeout(function () {
                         svg.insert("circle", "rect")
-                                .attr("cx", width)
-                                .attr("cy", height)
+                                .attr("cx", m[0])
+                                .attr("cy", m[1])
                                 .attr("r", 1e-6)
-                                .style("stroke", d3.hsl(h, 0.3, light))
+                                .style("stroke", d3.hsl((sexiang = (sexiang + 5) % 360), 0.3, .3))
                                 .style("stroke-opacity", 1)
                                 .transition()
                                 .duration(2000)
@@ -237,15 +210,46 @@
                                 .attr("r", 200)
                                 .style("stroke-opacity", 1e-6)
                                 .remove();
-                    }, i * 60)
-                }
-            }, 500)
-        }
 
-        function Stop() {
-            clearInterval(timer);
-            delete timer;
-        }
+                        d3.event.preventDefault();
+                    }
+
+
+                    var timer = null;
+                    Run();
+                    function Run() {
+                        timer = setInterval(function () {
+                            var h = Math.random() * 360;
+                            h = 220;
+                            var width = Math.random() * innerWidth;
+                            var height = Math.random() * innerHeight;
+                            var light = Math.random() / 3 + 0.1;
+                            console.log(light);
+                            for (i = 0; i < 8; i++) {
+                                setTimeout(function () {
+                                    svg.insert("circle", "rect")
+                                            .attr("cx", width)
+                                            .attr("cy", height)
+                                            .attr("r", 1e-6)
+                                            .style("stroke", d3.hsl(h, 0.3, light))
+                                            .style("stroke-opacity", 1)
+                                            .transition()
+                                            .duration(2000)
+                                            .ease(Math.sqrt)
+                                            .attr("r", 200)
+                                            .style("stroke-opacity", 1e-6)
+                                            .remove();
+                                }, i * 60)
+                            }
+                        }, 500)
+                    }
+
+                    function Stop() {
+                        clearInterval(timer);
+                        delete timer;
+                    }
+
+                });
 
     })
 </script>

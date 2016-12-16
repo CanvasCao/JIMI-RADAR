@@ -8,8 +8,9 @@
  */
 ;
 (function (w, d, $, undefined) {
-    var JME = {};
 
+    console.log(window.echarts)
+    var JME = {};
     var rgbListIndex = 0;
     var listArr = [
         {r: 100,},
@@ -164,7 +165,7 @@
         var myChart = echarts.init(document.getElementById(domId));
         myChart.setOption(option);
     };
-    JME.drawVideoLine = function (json) {
+    JME.drawLine = function (json) {
         var domId = json.domId,
             dataJson = json.dataJson,
             imgUrl = json.imgUrl,

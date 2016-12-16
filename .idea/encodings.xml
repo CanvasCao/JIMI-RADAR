@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/JIMI-RADAR 12-6/css/proDetailContent.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/JIMI-RADAR 12-6/js/echarts/jimiEcharts.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/JIMI-RADAR 12-6/js/tool/contentInitObj.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/JIMI-RADAR 12-6/js/viewModel/productDetailParas/productDetailParas.js" charset="UTF-8" />

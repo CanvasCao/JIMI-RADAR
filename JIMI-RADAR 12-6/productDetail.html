@@ -6,6 +6,7 @@
           content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
     <title>产品详情</title>
     <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/proDetailContent.css"/>
     <style type="text/css">
         body {
             background: #f1f4f7;
@@ -42,8 +43,7 @@
             box-shadow: 0 3px 8px -6px rgba(0, 0, 0, .1);
         }
 
-        /*************************************************************************************/
-
+        /*************************************************************************/
         .proDetailMenu {
             float: left;
             width: 200px;
@@ -76,83 +76,14 @@
             content: "";
             position: absolute;
             right: -11px;
-            top: 1px;
+            top: 3px;
             border-top: 32px solid transparent;
             border-bottom: 19px solid transparent;
             border-left: 13px solid #373b40;
         }
-
-        .proDetailContent {
-            float: left;
-            /*1024-180*/
-            width: 790px;
-            /*border: 1px solid #000;*/
-            box-sizing: border-box;
-            padding: 0 30px 30px 30px;
-        }
-
-        .proDetailContent > div {
-            display: none;
-        }
-
-        /*******************************************************************/
-        /*canvas*/
-        .canvasObj {
-            margin-bottom: 50px;
-            /*margin-left: 50px;*/
-            width: 600px;
-
-        }
-
-        .canvasCon {
-            width: 600px;
-            height: 400px;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .canvasDesc {
-            font-size: 18px;
-            font-weight: bold;
-            box-sizing: border-box;
-            padding: 15px 0;
-        }
-
-        .canvasObjHalf {
-            margin-bottom: 50px;
-            display: inline-block;
-            width: 330px;
-            margin-right: 3%;
-        }
-
-        .canvasConHalf {
-            width: 330px;
-            height: 300px;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .canvasCon, .canvasConHalf, .spa {
-            box-shadow: 4px 10px 15px #d9e0e7;
-            -webkit-transition: all 0.2s ease 0s;
-            -moz-transition: all 0.2s ease 0s;
-            -ms-transition: all 0.2s ease 0s;
-            transition: all 0.2s ease 0s;
-        }
-
-        .canvasCon:hover, .canvasConHalf:hover, .spa:hover {
-            box-shadow: 2px 4px 12px #d9e0e7;
-        }
-
-        .spa {
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
     </style>
 </head>
 <body>
-<!--测试版心-->
 <!--<div class='innerC'></div>-->
 <div class="header"></div>
 <div class='contentInnerC'>
@@ -164,175 +95,72 @@
 
     <div class='proParameterCon' style='margin-bottom: 10px;'></div>
     <div class='proDetail' style='margin-bottom: 50px;'>
-        <div class='proDetailMenu'>
-            <ul>
-                <li class='proDetailMenuCur'>产品风评</li>
-                <li>功效传达</li>
-                <li>价格认可度</li>
-                <li>消费者画像</li>
-                <li>核心成分</li>
-                <li>营销曝光</li>
-                <li>影响力</li>
-            </ul>
-        </div>
-        <div class='proDetailContent'>
-            <div class='proDetailLi'></div>
-            <div class='proDetailLi'>
-                <div class='canvasObj'>
-                    <div class='canvasDesc'>▎功效</div>
-                    <div class='canvasCon' id="canvasEffect"></div>
-                </div>
-                <div class='canvasObj'>
-                    <div class='canvasDesc'>▎功效满意度</div>
-                    <div class='canvasCon' id="canvasEffectSatisfaction"></div>
-                </div>
-                <div class='canvasObj' style='display: none'>
-                    <div class='canvasDesc'>▎妆感描述</div>
-                    <div class='canvasCon' id="canvasMakeup"></div>
-                </div>
-                <div class='canvasObj' style='display: none'>
-                    <div class='canvasDesc'>▎颜色描述</div>
-                    <div class='canvasCon' id="canvasColor"></div>
-                </div>
-            </div>
-            <div class='proDetailLi'>
-                <div class='canvasObj'>
-                    <div class='canvasDesc'>▎各渠道价格</div>
-                    <div class='canvasCon' id="canvasPrice"></div>
-                </div>
-                <div class='canvasObj'>
-                    <div class='canvasDesc'>▎价格认可度</div>
-                    <div class='canvasCon' id="canvasPriceSatisfaction"></div>
-                </div>
-            </div>
-            <div class='proDetailLi'>
-                <div class='canvasObjHalf'>
-                    <div class='canvasDesc'>▎年龄定位</div>
-                    <div class='canvasConHalf' id="canvasCustomerAge"></div>
-                </div>
-                <div class='canvasObjHalf'>
-                    <div class='canvasDesc'>▎肤质定位</div>
-                    <div class='canvasConHalf' id="canvasCustomerSkin"></div>
-                </div>
-                <div class='canvasObjHalf'>
-                    <div class='canvasDesc'>▎地区定位</div>
-                    <div class='canvasConHalf' id="canvasCustomerLocation"></div>
-                </div>
-                <div class='canvasObjHalf'>
-                    <div class='canvasDesc'>▎性别定位</div>
-                    <div class='canvasConHalf' id="canvasCustomerSex"></div>
-                </div>
-            </div>
-            <div class='proDetailLi'>
-                <div class='canvasDesc'>▎成分列表</div>
-                <div class='spa' style='margin: 50px 0 150px;'>
-                    <div id="compHeader" style='display: none'></div>
-                    <div id="compAltTab"></div>
-                    <div id="compList"></div>
-                    <div id="compMiddle" style="box-sizing: border-box;padding: 0 10px"></div>
-                </div>
-            </div>
-            <div class='proDetailLi'>
-                <div class='canvasObj'>
-                    <div class='canvasDesc'>▎相关视频数量</div>
-                    <div class='canvasCon' id="canvasVideoNum"></div>
-                </div>
-                <div class='canvasObj'>
-                    <div class='canvasDesc'>▎最大播放次数</div>
-                    <div class='canvasCon' id="canvasVideoPlay"></div>
-                </div>
-                <div class='canvasObj'>
-                    <div class='canvasDesc'>▎相关视频</div>
-                    <div>
-                        <embed src='http://player.youku.com/player.php/sid/XMTcxMDQ0MjMy/v.swf' allowFullScreen='true'
-                               quality='high' width='480' height='400' align='middle' allowScriptAccess='always'
-                               type='application/x-shockwave-flash'></embed>
-                        <div>123</div>
-                    </div>
-                </div>
-                <div class='canvasObj'>
-                    <div class='canvasDesc'>▎热门事件</div>
-                    <div>暂无</div>
-                </div>
-            </div>
-            <div class='proDetailLi'>
-                <div class='canvasObj'>
-                    <div class='canvasDesc'>▎外形 (包装)</div>
-                    <div class='canvasCon' id="canvasOutlook2"></div>
-                </div>
-            </div>
-        </div>
+        <div class='proDetailMenu'></div>
+        <div class='proDetailContent'></div>
         <div style="clear: both;"></div>
     </div>
 </div>
 <div class='footer'></div>
 
 <script src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js"></script>
-
 <script src='js/echarts/echarts.min.js'></script>
 <script src='js/echarts/wordCloud.js'></script>
-<script src='js/echarts/jimiEcharts.js'></script>
-
-<script src='js/tool/fastclick.js'></script>
-<script src="js/searchToJson/searchToJson.js"></script>
-<script src="js/globalManager/globalManager.js"></script>
-<script src='js/constant/jimiHost.js'></script>
-<script src='js/controller/controller.js'></script>
-
-<script src='js/viewModel/radarFooter/radarFooter.js'></script>
+<script src="js/require/require.min.js"></script>
+<script src="js/require/requireConfig.js"></script>
 <link rel="stylesheet" href="js/viewModel/radarHeader/radarHeader.css"/>
-<script src='js/viewModel/radarHeader/radarHeader.js'></script>
-<script src='js/viewModel/reportTitle/reportTitle.js'></script>
-<script src='js/viewModel/productDetailParas/productDetailParas.js'></script>
-
-<script src='js/viewModel/composition/spa-alternateTab.js'></script>
-<script src='js/viewModel/composition/spa-compositionHeader.js'></script>
-<script src='js/viewModel/composition/spa-middleComponent.js'></script>
-<script src='js/viewModel/composition/spa-compositionList.js'></script>
-<script src='js/tool/contentInitObj.js'></script>
 <script>
     $(function () {
-        //initVM.........................................
-        var radarHeader = new RadarHeader('.header');
-        var radarFooter = new RadarFooter('.footer');
-        var productDetailParas = new ProductDetailParas('.proParameterCon', {
-            imgUrl: 'img/productDetail/1.jpg',
-            chiName: '兰蔻 新精华肌底液',
-            engName: 'ADVANCED GENIFIQUE',
-            otherArray: [
-                '所属品牌：Lancome',
-                '所属企业：兰蔻（中国）有限公司',
-                '分类： 护肤 / 肌底液',
-                '规格：30ml',
-                '当前市场参考价：中国官方售价￥760',
-                '采集样本数量：4321',
-            ],
-        });
-        var reportBreadCrumb = new ReportBreadCrumb('.reportLeft', {
-            breadCrumb: ['兰蔻 新精华肌底液'],
+        requirejs([
+            'JME',
+            'contentInitObj',
+
+            'searchToJson',
+            'globalManager',
+            'jimiHost',
+            'controller',
+
+            'vmRadarHeader',
+            'vmRadarFooter',
+            'vmReportTitle',
+            'vmDetailParas',
+        ], function () {
+            //initVM.........................................
+            var radarHeader = new RadarHeader('.header');
+            var radarFooter = new RadarFooter('.footer');
+            var productDetailParas = new ProductDetailParas('.proParameterCon', {
+                imgUrl: 'img/productDetail/1.jpg',
+                chiName: '兰蔻 新精华肌底液',
+                engName: 'ADVANCED GENIFIQUE',
+                otherArray: [
+                    '所属品牌：Lancome',
+                    '所属企业：兰蔻（中国）有限公司',
+                    '分类： 护肤 / 肌底液',
+                    '规格：30ml',
+                    '当前市场参考价：中国官方售价￥760',
+                    '采集样本数量：4321',
+                ],
+            });
+            var reportBreadCrumb = new ReportBreadCrumb('.reportLeft', {
+                breadCrumb: ['兰蔻 新精华肌底液'],
+            })
+            var reportDownload = new ReportDownload('.reportRight', {
+                startTime: '2016年9月14日',
+                endTime: '2016年9月20日',
+            })
+
+            //contentInitObj初始化之后才可以bindEvent......................................
+            //左侧按钮点击以后的排它事件
+            $('.proDetailMenu li').click(function () {
+                var index = $(this).index();
+                $('.proDetailContent .proDetailLi').eq(index).show().siblings().hide();
+                $(this).addClass('proDetailMenuCur').siblings().removeClass('proDetailMenuCur');
+                //更新canvas......................................
+                contentInitObj.fresh(index);
+            });
+
+            //init.............................................. 模拟第一次点击
+            $('.proDetailMenu li').eq(0).trigger("click");
         })
-        var reportDownload = new ReportDownload('.reportRight', {
-            startTime: '2016年9月14日',
-            endTime: '2016年9月20日',
-        })
-
-        //jqObj.........................................
-        var $DetailMenu = $('.proDetailMenu');
-        var $DetailContent = $('.proDetailMenu');
-
-        //bindEvent......................................
-        //左侧按钮点击以后的排它事件
-        $('.proDetailMenu li').click(function () {
-            var index = $(this).index();
-            $('.proDetailContent .proDetailLi').eq(index).show().siblings().hide();
-            $(this).addClass('proDetailMenuCur').siblings().removeClass('proDetailMenuCur');
-
-            //更新canvas......................................
-            contentInitObj.init(index);
-        })
-
-        //init.............................................. 模拟第一次点击
-        $('.proDetailMenu li').eq(0).trigger("click");
     })
 </script>
 <script>
