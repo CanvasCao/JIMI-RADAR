@@ -25,6 +25,23 @@ requirejs.config({
         vmDetailParas: 'viewModel/productDetailParas/productDetailParas',
         vmRadarList: 'viewModel/radarList/radarList',
         vmReportTitle: 'viewModel/reportTitle/reportTitle',
-
+    },
+    shim: {
+        'JME': {
+            //These script dependencies should be loaded before loading
+            //backbone.js
+            deps: ['echarts'],
+            //Once loaded, use the global 'Backbone' as the
+            //module value.
+            //exports: 'JME'
+        },
+        'wordCloud': {
+            //These script dependencies should be loaded before loading
+            //backbone.js
+            deps: ['echarts'],
+            //Once loaded, use the global 'Backbone' as the
+            //module value.
+            //exports: 'JME'
+        },
     }
 });

@@ -7,9 +7,7 @@
  * Date: 2016年12月12日11:19:47
  */
 ;
-(function (w, d, $, undefined) {
-
-    console.log(window.echarts)
+(function (w, d, echarts, undefined) {
     var JME = {};
     var rgbListIndex = 0;
     var listArr = [
@@ -287,4 +285,4 @@
         myChart.setOption(option);
     };
     w.JME = JME;
-})(window, document, $)
+})(window, document, echarts)

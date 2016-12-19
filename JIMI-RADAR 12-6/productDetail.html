@@ -110,7 +110,9 @@
 <link rel="stylesheet" href="js/viewModel/radarHeader/radarHeader.css"/>
 <script>
     $(function () {
-        requirejs([
+        require([
+//            'echarts',
+//            'wordCloud',
             'JME',
             'contentInitObj',
 
@@ -123,7 +125,7 @@
             'vmRadarFooter',
             'vmReportTitle',
             'vmDetailParas',
-        ], function () {
+        ], function (echarts) {
             //initVM.........................................
             var radarHeader = new RadarHeader('.header');
             var radarFooter = new RadarFooter('.footer');
