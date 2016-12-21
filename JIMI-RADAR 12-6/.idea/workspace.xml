@@ -21,25 +21,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="contentInitObj.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="contentInitObj.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/tool/contentInitObj.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="735" column="30" selection-start-line="735" selection-start-column="30" selection-end-line="735" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.49107143">
+              <caret line="721" column="31" selection-start-line="721" selection-start-column="18" selection-end-line="721" selection-end-column="31" />
               <folding>
                 <element signature="e#8841#15930#0" expanded="false" />
                 <element signature="e#15996#17427#0" expanded="false" />
                 <element signature="e#17494#19877#0" expanded="false" />
                 <element signature="e#19944#23416#0" expanded="false" />
                 <element signature="e#20718#23363#0" expanded="false" />
-                <element signature="e#25957#26769#0" expanded="false" />
-                <element signature="e#26834#33609#0" expanded="false" />
-                <marker date="1482316783545" expanded="true" signature="946:958" placeholder="..." />
-                <marker date="1482316783545" expanded="true" signature="9383:9396" placeholder="..." />
-                <marker date="1482316783545" expanded="true" signature="9600:9613" placeholder="..." />
-                <marker date="1482316783545" expanded="true" signature="20135:20156" placeholder="..." />
-                <marker date="1482316783545" expanded="true" signature="20207:20220" placeholder="..." />
-                <marker date="1482316783545" expanded="true" signature="20371:20409" placeholder="..." />
+                <element signature="e#25955#26767#0" expanded="false" />
+                <element signature="e#26832#33607#0" expanded="false" />
+                <marker date="1482317377676" expanded="true" signature="946:958" placeholder="..." />
+                <marker date="1482317377676" expanded="true" signature="9383:9396" placeholder="..." />
+                <marker date="1482317377676" expanded="true" signature="9600:9613" placeholder="..." />
+                <marker date="1482317377676" expanded="true" signature="20135:20156" placeholder="..." />
+                <marker date="1482317377676" expanded="true" signature="20207:20220" placeholder="..." />
+                <marker date="1482317377676" expanded="true" signature="20371:20409" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -69,10 +69,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="productDetail.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="productDetail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/productDetail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70357555">
+            <state vertical-scroll-proportion="-21.034483">
               <caret line="119" column="28" selection-start-line="119" selection-start-column="28" selection-end-line="119" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -106,6 +106,7 @@
         <option value="$PROJECT_DIR$/productList.html" />
         <option value="$PROJECT_DIR$/json/list.js" />
         <option value="$PROJECT_DIR$/js/tool/contentInitObj.js" />
+        <option value="&lt;61ae2ff6-7688-403f-8296-a6adac721f08&gt;/var/www/html/workerman/jimi/apps_T1/JIMI-RADAR/js/tool/contentInitObj.js" />
       </list>
     </option>
   </component>
@@ -311,14 +312,14 @@
             <element signature="e#17494#19877#0" expanded="false" />
             <element signature="e#19944#23416#0" expanded="false" />
             <element signature="e#20718#23363#0" expanded="false" />
-            <element signature="e#25957#26769#0" expanded="false" />
-            <element signature="e#26834#33609#0" expanded="false" />
-            <marker date="1482316783545" expanded="true" signature="946:958" placeholder="..." />
-            <marker date="1482316783545" expanded="true" signature="9383:9396" placeholder="..." />
-            <marker date="1482316783545" expanded="true" signature="9600:9613" placeholder="..." />
-            <marker date="1482316783545" expanded="true" signature="20135:20156" placeholder="..." />
-            <marker date="1482316783545" expanded="true" signature="20207:20220" placeholder="..." />
-            <marker date="1482316783545" expanded="true" signature="20371:20409" placeholder="..." />
+            <element signature="e#25955#26767#0" expanded="false" />
+            <element signature="e#26832#33607#0" expanded="false" />
+            <marker date="1482317377676" expanded="true" signature="946:958" placeholder="..." />
+            <marker date="1482317377676" expanded="true" signature="9383:9396" placeholder="..." />
+            <marker date="1482317377676" expanded="true" signature="9600:9613" placeholder="..." />
+            <marker date="1482317377676" expanded="true" signature="20135:20156" placeholder="..." />
+            <marker date="1482317377676" expanded="true" signature="20207:20220" placeholder="..." />
+            <marker date="1482317377676" expanded="true" signature="20371:20409" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -361,14 +362,14 @@
             <element signature="e#17494#19877#0" expanded="false" />
             <element signature="e#19944#23416#0" expanded="false" />
             <element signature="e#20718#23363#0" expanded="false" />
-            <element signature="e#25957#26769#0" expanded="false" />
-            <element signature="e#26834#33609#0" expanded="false" />
-            <marker date="1482316783545" expanded="true" signature="946:958" placeholder="..." />
-            <marker date="1482316783545" expanded="true" signature="9383:9396" placeholder="..." />
-            <marker date="1482316783545" expanded="true" signature="9600:9613" placeholder="..." />
-            <marker date="1482316783545" expanded="true" signature="20135:20156" placeholder="..." />
-            <marker date="1482316783545" expanded="true" signature="20207:20220" placeholder="..." />
-            <marker date="1482316783545" expanded="true" signature="20371:20409" placeholder="..." />
+            <element signature="e#25955#26767#0" expanded="false" />
+            <element signature="e#26832#33607#0" expanded="false" />
+            <marker date="1482317377676" expanded="true" signature="946:958" placeholder="..." />
+            <marker date="1482317377676" expanded="true" signature="9383:9396" placeholder="..." />
+            <marker date="1482317377676" expanded="true" signature="9600:9613" placeholder="..." />
+            <marker date="1482317377676" expanded="true" signature="20135:20156" placeholder="..." />
+            <marker date="1482317377676" expanded="true" signature="20207:20220" placeholder="..." />
+            <marker date="1482317377676" expanded="true" signature="20371:20409" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -411,14 +412,14 @@
             <element signature="e#17494#19877#0" expanded="false" />
             <element signature="e#19944#23416#0" expanded="false" />
             <element signature="e#20718#23363#0" expanded="false" />
-            <element signature="e#25957#26769#0" expanded="false" />
-            <element signature="e#26834#33609#0" expanded="false" />
-            <marker date="1482316783545" expanded="true" signature="946:958" placeholder="..." />
-            <marker date="1482316783545" expanded="true" signature="9383:9396" placeholder="..." />
-            <marker date="1482316783545" expanded="true" signature="9600:9613" placeholder="..." />
-            <marker date="1482316783545" expanded="true" signature="20135:20156" placeholder="..." />
-            <marker date="1482316783545" expanded="true" signature="20207:20220" placeholder="..." />
-            <marker date="1482316783545" expanded="true" signature="20371:20409" placeholder="..." />
+            <element signature="e#25955#26767#0" expanded="false" />
+            <element signature="e#26832#33607#0" expanded="false" />
+            <marker date="1482317377676" expanded="true" signature="946:958" placeholder="..." />
+            <marker date="1482317377676" expanded="true" signature="9383:9396" placeholder="..." />
+            <marker date="1482317377676" expanded="true" signature="9600:9613" placeholder="..." />
+            <marker date="1482317377676" expanded="true" signature="20135:20156" placeholder="..." />
+            <marker date="1482317377676" expanded="true" signature="20207:20220" placeholder="..." />
+            <marker date="1482317377676" expanded="true" signature="20371:20409" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -500,18 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/echarts/jimiEcharts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#1185#2762#0" expanded="false" />
-            <element signature="e#6582#8331#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/productList.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23875433">
@@ -528,34 +517,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/tool/contentInitObj.js">
+    <entry file="file://$PROJECT_DIR$/productDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.034483">
+          <caret line="119" column="28" selection-start-line="119" selection-start-column="28" selection-end-line="119" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/echarts/jimiEcharts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="735" column="30" selection-start-line="735" selection-start-column="30" selection-end-line="735" selection-end-column="30" />
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#1185#2762#0" expanded="false" />
+            <element signature="e#6582#8331#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/tool/contentInitObj.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49107143">
+          <caret line="721" column="31" selection-start-line="721" selection-start-column="18" selection-end-line="721" selection-end-column="31" />
           <folding>
             <element signature="e#8841#15930#0" expanded="false" />
             <element signature="e#15996#17427#0" expanded="false" />
             <element signature="e#17494#19877#0" expanded="false" />
             <element signature="e#19944#23416#0" expanded="false" />
             <element signature="e#20718#23363#0" expanded="false" />
-            <element signature="e#25957#26769#0" expanded="false" />
-            <element signature="e#26834#33609#0" expanded="false" />
-            <marker date="1482316783545" expanded="true" signature="946:958" placeholder="..." />
-            <marker date="1482316783545" expanded="true" signature="9383:9396" placeholder="..." />
-            <marker date="1482316783545" expanded="true" signature="9600:9613" placeholder="..." />
-            <marker date="1482316783545" expanded="true" signature="20135:20156" placeholder="..." />
-            <marker date="1482316783545" expanded="true" signature="20207:20220" placeholder="..." />
-            <marker date="1482316783545" expanded="true" signature="20371:20409" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/productDetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70357555">
-          <caret line="119" column="28" selection-start-line="119" selection-start-column="28" selection-end-line="119" selection-end-column="28" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#25955#26767#0" expanded="false" />
+            <element signature="e#26832#33607#0" expanded="false" />
+            <marker date="1482317377676" expanded="true" signature="946:958" placeholder="..." />
+            <marker date="1482317377676" expanded="true" signature="9383:9396" placeholder="..." />
+            <marker date="1482317377676" expanded="true" signature="9600:9613" placeholder="..." />
+            <marker date="1482317377676" expanded="true" signature="20135:20156" placeholder="..." />
+            <marker date="1482317377676" expanded="true" signature="20207:20220" placeholder="..." />
+            <marker date="1482317377676" expanded="true" signature="20371:20409" placeholder="..." />
           </folding>
         </state>
       </provider>
