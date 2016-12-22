@@ -738,20 +738,29 @@
             });
 
             //appendVideo.............................................
+            var videoJson = {
+                "data": [{"vid": "XNjg2MjY0MzE2", "title": "兰蔻“小黑瓶“家族广告_标清"}, {
+                    "vid": "XMzIxNTE2Njg4",
+                    "title": "兰蔻“小黑瓶”广告"
+                }, {"vid": "XOTY1NDU4Nzg0", "title": "Suri-兰蔻-小黑瓶大眼精华-720_480"}, {
+                    "vid": "XMzI1NjE2MjIw",
+                    "title": "兰蔻 小黑瓶精华"
+                }, {"vid": "XNjg2MDc5NTcy", "title": "兰蔻”小黑瓶“亚洲新闻发布会"}, {
+                    "vid": "XNDUxMDUyMzEy",
+                    "title": "兰蔻 小黑瓶眼部肌底精华（眼部年轻基因   一触即发）"
+                }]
+            };
             var str = '';
-            str += getVideoDom(null, '兰蔻全新立体塑颜系列 重塑女人“3D”之美');
-            str += getVideoDom(null, '兰蔻全新立体塑颜系列 重塑女人“3D”之美');
-            str += getVideoDom(null, '兰蔻全新立体塑颜系列 重塑女人“3D”之美');
-            str += getVideoDom(null, '兰蔻全新立体塑颜系列 重塑女人“3D”之美');
-            str += getVideoDom(null, '兰蔻全新立体塑颜系列 重塑女人“3D”之美');
-            str += getVideoDom(null, '兰蔻全新立体塑颜系列 重塑女人“3D”之美');
-
+            [].forEach.call(videoJson.data, function (e, i, arr) {
+                str += getVideoDom(e.vid, e.title);
+            })
+            str+='<div style="clear: both"></div>'
             $('#relatedVideoCon').html(str);
 
-            function getVideoDom(videoSrc, videoTitle) {
+            function getVideoDom(videoId, videoTitle) {
                 var str = '';
                 str += '<div class="relatedVideoSec">'
-                str += "<iframe src='http://player.youku.com/embed/XMTcxMDQ0MjMy' frameborder=0 'allowfullscreen'></iframe>" + "<div>" + videoTitle + "</div>"
+                str += "<iframe src='http://player.youku.com/embed/" + videoId + "' frameborder=0 'allowfullscreen'></iframe>" + "<div class='videoTitle'>" + videoTitle + "</div>"
                 str += '</div>';
 
                 return str;

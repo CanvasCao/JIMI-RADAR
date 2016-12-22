@@ -70,9 +70,14 @@
     display: inline-block;
     width: 198px;
     margin: 0 12px 12px 0;
+    float: left;
 }
 
 .relatedVideoSec iframe {
     width: 198px;
     height: 132px;
+}
+
+.videoTitle {
+    height: 38px;
 }
